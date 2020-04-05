@@ -13,12 +13,19 @@ github = Github(username, password)
 counter = Counter()
 dot_repos = github.search_repositories(query="topic:dotfiles")
 
-for repo in dot_repos[:200]:
+def strip_comment(line):
+    i = line.find('"')
+    if i == -1:
+        return line
+    return line[:i]
+
+for i, repo in enumerate(dot_repos[:300]):
     try:
         vimrc = repo.get_contents(".vimrc")
-        counter.update(vimrc.decoded_content.decode("utf-8").splitlines())
-        print("+1")
-    except github_module.GithubException:
-        print(":(")
+        lines = vimrc.decoded_content.decode("utf-8").splitlines()
+        counter.update(strip_comment(line) for line in lines)
+        print(i, "+1")
+    except Exception:
+        print(i, ":(")
 
 pprint(counter)
