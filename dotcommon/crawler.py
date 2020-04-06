@@ -1,13 +1,15 @@
 from github import GithubException
 from collections import Counter
 
-def most_common(
-    github, atomizer, paths, *, repo_count=100, progress_reporter=(lambda repo: None)
+def get_repos(github, query="topic:dotfiles"):
+    return github.search_repositories(query=query)
+
+def count_atoms(
+    repos, atomizer, paths, *, repo_count=100, progress_reporter=(lambda repo: None)
 ):
     counter = Counter()
-    dot_repos = github.search_repositories(query="topic:dotfiles")
 
-    for repo in dot_repos[:repo_count]:
+    for repo in repos[:repo_count]:
         progress_reporter(repo)
         for path in paths:
             try:

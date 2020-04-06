@@ -1,3 +1,6 @@
 #!/bin/python3 -i
 
-import dotcommon
+from github import Github
+
+import dotcommon.crawler as crawler
+import dotcommon.presets as presets
