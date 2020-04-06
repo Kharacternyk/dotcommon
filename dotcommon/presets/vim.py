@@ -1,12 +1,6 @@
-from dotcommon.util import strip
+from dotcommon.util import lines_starting_with
 from dotcommon.preset import preset
 
 paths = (".vimrc", "vimrc", ".vim/vimrc")
 
-@preset(paths)
-def set_statements(text):
-    lines = text.splitlines()
-    for line in lines:
-        stripped = strip(line, '"')
-        if stripped.startswith("set"):
-            yield stripped
+set_statements = lines_starting_with("set", '"'), paths

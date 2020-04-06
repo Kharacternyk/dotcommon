@@ -1,20 +1,7 @@
-from dotcommon.util import strip
+from dotcommon.util import lines_starting_with
 from dotcommon.preset import preset
 
 paths = (".bashrc", "bashrc")
 
-@preset(paths)
-def readline_macros(text):
-    lines = text.splitlines()
-    for line in lines:
-        stripped = strip(line, "#")
-        if stripped.startswith("bind"):
-            yield stripped
-
-@preset(paths)
-def aliases(text):
-    lines = text.splitlines()
-    for line in lines:
-        stripped = strip(line, "#")
-        if stripped.startswith("alias"):
-            yield stripped
+readline_macros = lines_starting_with("bind", "#"), paths
+aliases = lines_starting_with("alias", "#"), paths

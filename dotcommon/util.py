@@ -5,3 +5,11 @@ def strip(string, comment_chars):
     else:
         return string[:comment_start].strip()
 
+def lines_starting_with(start, comment_chars):
+    def _f(text):
+        lines = text.splitlines()
+        for line in lines:
+            stripped = strip(line, '"')
+            if stripped.startswith(start):
+                yield stripped
+    return _f
