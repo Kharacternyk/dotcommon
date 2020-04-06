@@ -1,6 +1,6 @@
-#!/bin/python3
+#!/bin/python3 -i
 
-import github as github_module
+import github
 from github import Github
 from getpass import getpass
 from collections import Counter
@@ -11,35 +11,20 @@ def auth():
     password = getpass("Password: ")
     return Github(username, password)
 
-def strip(line, comment_chars):
-    if comment_chars == None:
-        return line.strip()
-    i = line.find(comment_chars)
-    if i == -1:
-        return line.strip()
-    return line[:i].strip()
-
-def count_lines(count, *paths, comment_chars=None):
-    github = auth()
+def common(count, atomizer, paths):
+    github_instance = auth()
     counter = Counter()
+    dot_repos = github_instance.search_repositories(query="topic:dotfiles")
 
-    dot_repos = github.search_repositories(query="topic:dotfiles")
-
-    files_found = 0
-    total_lines = 0
     for i, repo in enumerate(dot_repos[:count]):
         for path in paths:
             try:
-                cfg = repo.get_contents(path)
-                files_found += 1
-
-                lines = cfg.decoded_content.decode("utf-8").splitlines()
-                total_lines += len(lines)
-
-                counter.update(strip(line, comment_chars) for line in lines)
-                print(i)
+                text = repo.get_contents(path).decoded_content.decode('utf-8')
+                counter.update(atomizer(text))
+                print(f"Repo #{i}: found {path}")
                 break
-            except Exception:
+            except github.GithubException:
+                print(f"Repo #{i}: no {path}")
                 pass
 
-    pprint(counter.most_common(total_lines // files_found))
+    pprint(counter.most_common(10))
