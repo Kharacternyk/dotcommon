@@ -10,6 +10,7 @@ def atomize(text):
         if stripped_line.startswith("set"):
             yield stripped_line
 
-paths = ('.vimrc', 'vimrc', '.vim/vimrc')
+
+paths = (".vimrc", "vimrc", ".vim/vimrc")
 
 preset = (atomize, paths)

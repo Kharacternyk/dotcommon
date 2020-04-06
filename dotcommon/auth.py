@@ -3,6 +3,7 @@ from getpass import getpass
 
 _github = None
 
+
 def auth():
     global _github
     if _github == None:
