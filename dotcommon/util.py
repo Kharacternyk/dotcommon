@@ -1,3 +1,6 @@
+def preset(paths):
+    return (lambda atomizer: (atomizer, paths))
+
 def strip(string, comment_chars):
     comment_start = string.find(comment_chars)
     if comment_start == -1:
