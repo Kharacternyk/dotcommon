@@ -1,15 +1,18 @@
 from dotcommon.util import strip
+from dotcommon.preset import preset
 
 paths = (".bashrc", "bashrc")
 
-def atomize_readline_macros(text):
+@preset(paths)
+def readline_macros(text):
     lines = text.splitlines()
     for line in lines:
         stripped = strip(line, "#")
         if stripped.startswith("bind"):
             yield stripped
 
-def atomize_aliases(text):
+@preset(paths)
+def aliases(text):
     lines = text.splitlines()
     for line in lines:
         stripped = strip(line, "#")
