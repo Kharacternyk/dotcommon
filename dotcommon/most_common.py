@@ -1,14 +1,11 @@
 from github import GithubException
 from collections import Counter
-from dotcommon.auth import auth
-
 
 def most_common(
-    atomizer, paths, *, repo_count=100, progress_reporter=(lambda repo: None)
+    github, atomizer, paths, *, repo_count=100, progress_reporter=(lambda repo: None)
 ):
-    github_instance = auth()
     counter = Counter()
-    dot_repos = github_instance.search_repositories(query="topic:dotfiles")
+    dot_repos = github.search_repositories(query="topic:dotfiles")
 
     for repo in dot_repos[:repo_count]:
         progress_reporter(repo)
