@@ -7,7 +7,7 @@ def atomize(text):
         else:
             stripped_line = line[:comment_start].strip()
 
-        if stripped_line.startswith(""):
+        if stripped_line.startswith("set"):
             yield stripped_line
 
 paths = ('.vimrc', 'vimrc', '.vim/vimrc')
