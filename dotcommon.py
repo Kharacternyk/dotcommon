@@ -16,15 +16,17 @@ def common(count, atomizer, paths):
     counter = Counter()
     dot_repos = github_instance.search_repositories(query="topic:dotfiles")
 
-    for i, repo in enumerate(dot_repos[:count]):
+    for repo in dot_repos[:count]:
+        print(f"{repo.full_name}:", end='')
         for path in paths:
             try:
                 text = repo.get_contents(path).decoded_content.decode('utf-8')
                 counter.update(atomizer(text))
-                print(f"Repo #{i}: found {path}")
+                print(f" found {path};", end='')
                 break
             except github.GithubException:
-                print(f"Repo #{i}: no {path}")
+                print(f" no {path};", end='')
                 pass
+        print()
 
     pprint(counter.most_common(10))
