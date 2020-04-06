@@ -20,4 +20,4 @@ def most_common(
             except GithubException:
                 pass
 
-    counter
+    return counter
