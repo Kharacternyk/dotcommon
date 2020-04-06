@@ -11,13 +11,15 @@ def auth():
     password = getpass("Password: ")
     return Github(username, password)
 
-def strip_comment(line, comment_chars):
+def strip(line, comment_chars):
+    if comment_chars == None:
+        return line.strip()
     i = line.find(comment_chars)
     if i == -1:
-        return line
-    return line[:i]
+        return line.strip()
+    return line[:i].strip()
 
-def count_lines(comment_chars, count, *paths):
+def count_lines(count, *paths, comment_chars=None):
     github = auth()
     counter = Counter()
 
@@ -28,7 +30,7 @@ def count_lines(comment_chars, count, *paths):
             try:
                 cfg = repo.get_contents(path)
                 lines = cfg.decoded_content.decode("utf-8").splitlines()
-                counter.update(strip_comment(line, comment_chars) for line in lines)
+                counter.update(strip(line, comment_chars) for line in lines)
                 print(i)
                 break
             except Exception:
