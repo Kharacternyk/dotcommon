@@ -7,6 +7,7 @@ bash_aliases = lines_starting_with("alias", "#"), bash_paths
 vim_paths = (".vimrc", "vimrc", ".vim/vimrc")
 vim_set_statements = lines_starting_with("set", '"'), vim_paths
 
+
 @preset(vim_paths)
 def vim_maps(text):
     lines = text.splitlines()
