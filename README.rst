@@ -21,17 +21,33 @@ Most common set statements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ====================  ===
-``set incsearch``     114
-``set hlsearch``      110
-``set ignorecase``    108
-``set expandtab``     104
-``set nocompatible``  103
-``set laststatus=2``  103
-``set autoindent``    103
-``set number``        101
-``set smartcase``     95
-``set showcmd``       83
+``set incsearch``     107
+``set ignorecase``    104
+``set expandtab``     99
+``set laststatus=2``  97
+``set hlsearch``      96
+``set autoindent``    95
+``set number``        91
+``set smartcase``     91
+``set nocompatible``  88
+``set showcmd``       77
 ====================  ===
+
+Most popular Vundle plugins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+=========================================== ==
+``Plugin 'scrooloose/nerdtree'``            19
+``Plugin 'tpope/vim-fugitive'``             15
+``Plugin 'VundleVim/Vundle.vim'``           13
+``Plugin 'vim-airline/vim-airline'``        13
+``Plugin 'airblade/vim-gitgutter'``         11
+``Plugin 'vim-airline/vim-airline-themes'`` 11
+``Plugin 'tpope/vim-surround'``             10
+``Plugin 'scrooloose/syntastic'``           9
+``Plugin 'gmarik/Vundle.vim'``              9
+``Plugin 'Raimondi/delimitMate'``           7
+=========================================== ==
 
 Try it yourself
 ===============
