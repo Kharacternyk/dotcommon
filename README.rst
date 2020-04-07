@@ -45,6 +45,7 @@ an access token for GitHub and create an instance of ``Github`` class:
 .. code-block:: python
 
     g = Github("your_token_here")
+    repos = crawler.get_repos(g)[:50]
 
 The primary operation is *counting atoms* where an *atom* is an alias,
 a readline macro, an import statement, etc.
@@ -55,7 +56,7 @@ of ``collections.Counter`` which will contain counted atoms.
 .. code-block:: python
 
     atomizers = presets.vim_set_statements,
-    counter = crawler.count_atoms(g, atomizers, presets.vim_paths)[0]
+    counter = crawler.count_atoms(repos, atomizers, presets.vim_paths)[0]
     for statement, count in counter.most_common(10):
         print(statement, count)
 
@@ -69,12 +70,13 @@ For example, if we want to get the most commonly exported variables in bashrc:
 
     def atomize(text):
         for line in text.splitlines():
-            if line != "" and line.split()[0] == "export":
+            words = line.split()
+            if len(words) > 1 and words[0] == "export":
                 yield line
 
     bashrc_paths = (".bashrc", "bashrc")
 
-    counter = crawler.count_atoms(g, (atomize,), bashrc_paths)[0]
+    counter = crawler.count_atoms(repos, (atomize,), bashrc_paths)[0]
     for export, count in counter.most_common(10):
         print(export, count)
 
