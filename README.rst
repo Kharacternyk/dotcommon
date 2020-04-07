@@ -69,7 +69,7 @@ For example, if we want to get the most commonly exported variables in bashrc:
 
     def atomize(text):
         for line in text.splitlines():
-            if line.split()[0] == "export":
+            if line != "" and line.split()[0] == "export":
                 yield line
 
     bashrc_paths = (".bashrc", "bashrc")
