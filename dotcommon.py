@@ -7,5 +7,5 @@ sys.ps2 = ".c'mon~ "
 
 from github import Github
 
-import dotcommon.crawler as crawler
-import dotcommon.presets as presets
+import dotcommon.crawler as c
+import dotcommon.presets as p
