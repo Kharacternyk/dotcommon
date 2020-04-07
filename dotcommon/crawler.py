@@ -7,12 +7,12 @@ def get_repos(github, query="topic:dotfiles"):
 
 
 def count_atoms(
-    repos, atomizer, paths, *, repo_count=100, progress_reporter=(lambda repo: None)
+    repos, atomizer, paths, *, repo_count=100, quite=False
 ):
     counter = Counter()
 
+    processed_repos = 0
     for repo in repos[:repo_count]:
-        progress_reporter(repo)
         for path in paths:
             try:
                 text = repo.get_contents(path).decoded_content.decode("utf-8")
@@ -20,5 +20,8 @@ def count_atoms(
                 break
             except GithubException:
                 pass
+        if not quite:
+            processed_repos += 1
+            print(f"[#{processed_repos}]: {repo.full_name}")
 
     return counter
