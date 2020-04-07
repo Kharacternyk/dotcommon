@@ -39,8 +39,8 @@ an access token for GitHub and create an instance of ``Github`` class:
 
     g = Github("your_token_here")
 
-The primary operation is *counting atoms* where an *atom* is alias,
-readline macro, import statement, etc.
+The primary operation is *counting atoms* where an *atom* is an alias,
+a readline macro, an import statement, etc.
 
 You may use any of the existing presets to generate an instance
 of ``collections.Counter`` which will contain counted atoms.
