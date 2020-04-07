@@ -14,7 +14,11 @@ def count_atoms(repos, atomizer, paths, *, repo_count=100, quite=False):
     for repo in repos[:repo_count]:
         for path in paths:
             try:
-                text = repo.get_contents(path).decoded_content.decode("utf-8")
+                contents = repo.get_contents(path)
+                if type(contents) == list:
+                    # It's a dir.
+                    continue
+                text = contents.decoded_content.decode("utf-8")
                 counter.update(atomizer(text))
                 succeeded_repos += 1
                 break
