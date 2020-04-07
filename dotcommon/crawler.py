@@ -6,9 +6,7 @@ def get_repos(github, query="topic:dotfiles"):
     return github.search_repositories(query=query)
 
 
-def count_atoms(
-    repos, atomizer, paths, *, repo_count=100, quite=False
-):
+def count_atoms(repos, atomizer, paths, *, repo_count=100, quite=False):
     counter = Counter()
 
     processed_repos = 0

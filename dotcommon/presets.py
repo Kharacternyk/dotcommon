@@ -17,5 +17,6 @@ def vim_maps(text):
         if space_index != -1 and stripped[:space_index].endswith("map"):
             yield stripped
 
+
 vim_vundle = lines_starting_with("Plugin", '"'), vim_paths
 vim_plug = lines_starting_with("Plug ", '"'), vim_paths
