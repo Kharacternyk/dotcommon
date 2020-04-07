@@ -54,7 +54,8 @@ of ``collections.Counter`` which will contain counted atoms.
 
 .. code-block:: python
 
-    counter = crawler.count_atoms(g, (presets.vim_set_statements,), *presets.vim_paths)
+    atomizers = presets.vim_set_statements,
+    counter = crawler.count_atoms(g, atomizers, presets.vim_paths)[0]
     for statement, count in counter.most_common(10):
         print(statement, count)
 
@@ -73,7 +74,7 @@ For example, if we want to get the most commonly exported variables in bashrc:
 
     bashrc_paths = (".bashrc", "bashrc")
 
-    counter = crawler.count_atoms(g, (atomize,), bashrc_paths)
+    counter = crawler.count_atoms(g, (atomize,), bashrc_paths)[0]
     for export, count in counter.most_common(10):
         print(export, count)
 
