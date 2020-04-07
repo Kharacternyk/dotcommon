@@ -12,18 +12,18 @@ GitHub search ``topic:dotfiles``.
 
 10 most common Vim set statements (``vimrc`` was found in 165 repos):
 
-================  ===
-set incsearch     114
-set hlsearch      110
-set ignorecase    108
-set expandtab     104
-set nocompatible  103
-set laststatus=2  103
-set autoindent    103
-set number        101
-set smartcase     95 
-set showcmd       83 
-================  ===
+====================  ===
+``set incsearch``     114
+``set hlsearch``      110
+``set ignorecase``    108
+``set expandtab``     104
+``set nocompatible``  103
+``set laststatus=2``  103
+``set autoindent``    103
+``set number``        101
+``set smartcase``     95
+``set showcmd``       83
+====================  ===
 
 ===============
 Try it yourself
