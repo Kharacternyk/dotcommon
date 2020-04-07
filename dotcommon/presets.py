@@ -9,7 +9,7 @@ vim_set_statements = lines_starting_with("set", '"'), vim_paths
 
 
 @preset(vim_paths)
-def vim_maps(text):
+def vim_map_statements(text):
     lines = text.splitlines()
     for line in lines:
         stripped = strip(line, '"')
