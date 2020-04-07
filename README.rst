@@ -15,7 +15,7 @@ GitHub search ``topic:dotfiles``.
 Vim
 ---
 
-``vimrc`` was found in 165 repos
+``vimrc`` was found in 165 repos.
 
 Most common set statements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,3 +49,23 @@ Most popular Vundle plugins
 ``Plugin 'Raimondi/delimitMate'``           7
 =========================================== ==
 
+Bash
+----
+
+``bashrc`` was found in 74 repos.
+
+Most common aliases
+~~~~~~~~~~~~~~~~~~~
+
+==================================== =
+``alias ls='ls --color=auto'``       8
+``alias grep='grep --color=auto'``   7
+``alias ..='cd ..'``                 7
+``alias ll='ls -alF'``               7
+``alias la='ls -A'``                 7
+``alias l='ls -CF'``                 7
+``alias cp='cp -i'``                 6
+``alias alert=...``                  5
+``alias mv='mv -i'``                 5
+``alias fgrep='fgrep --color=auto'`` 5
+==================================== =
