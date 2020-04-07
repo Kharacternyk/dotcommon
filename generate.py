@@ -6,21 +6,13 @@ import dotcommon.presets as p
 from tabulate import tabulate
 from github import Github
 
-token = open("token.gh")
-g = Github(token.read().strip())
-token.close()
+with open("token.gh") as token:
+    g = Github(token.read().strip())
 
-repos = c.get_repos(g)[:10]
+repos = c.get_repos(g)[:200]
 
-readme_intro = """
-dotcommon is a crawler that is built to answer questions
-*What are the most popular Bash aliases?*,
-*What are the most popular Vundle plugins for Vim?*, etc.
-It crawls GitHub repos that match topic ``dotfiles`` and counts such things.
-
-.. contents:: Navigation:
-   :backlinks: none
-"""
+with open("README-TEMPLATE.rst") as template:
+    readme_intro = template.read()
 
 readme = open("README.rst", "w")
 
