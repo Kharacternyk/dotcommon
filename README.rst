@@ -36,7 +36,7 @@ Most common set statements
 Try it yourself
 ===============
 
-Clone the repository. The only external dependency is PyGithub.
+Clone the repository. The only external dependency is PyGithub_.
 
 ``dotcommon.py`` is an executable that imports dotcommon modules
 and brings you into Python REPL. First of all, you need to generate
@@ -55,3 +55,6 @@ of ``collections.Counter`` which will contain counted atoms.
 .. code-block:: python
 
     counter = crawler.count_atoms(g, *presets.vim_set_statements)
+
+.. LINKS
+.. _PyGithub: https://github.com/PyGithub/PyGithub
