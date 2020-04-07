@@ -12,16 +12,18 @@ def count_atoms(
     counter = Counter()
 
     processed_repos = 0
+    succeeded_repos = 0
     for repo in repos[:repo_count]:
         for path in paths:
             try:
                 text = repo.get_contents(path).decoded_content.decode("utf-8")
                 counter.update(atomizer(text))
+                succeeded_repos += 1
                 break
             except (GithubException, AssertionError):
                 pass
         if not quite:
             processed_repos += 1
-            print(f"[#{processed_repos}]: {repo.full_name}")
+            print(f"[#{processed_repos}]({succeeded_repos}): {repo.full_name}")
 
     return counter
