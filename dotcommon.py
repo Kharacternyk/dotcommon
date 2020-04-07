@@ -1,4 +1,4 @@
-#!/bin/python3 -i
+#!/usr/bin/env -S python -i
 
 import sys
 
