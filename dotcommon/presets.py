@@ -9,6 +9,7 @@ class Bash:
     exports = lines_starting_with("export", "#")
 
     atomizers = readline_macros, aliases, exports
+    preset = paths, atomizers
 
 
 class Vim:
@@ -19,3 +20,4 @@ class Vim:
     plug = lines_starting_with("Plug ", '"')
 
     atomizers = set_statements, vundle, plug
+    preset = paths, atomizers
