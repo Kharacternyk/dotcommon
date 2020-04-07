@@ -78,7 +78,7 @@ For example, if we want to get the most commonly exported variables in bashrc:
     for export, count in counter.most_common(10):
         print(export, count)
 
-Note that our custom atomizer doesn't recognize comments and indented lines.
+Note that our custom atomizer doesn't recognize comments.
 Use ``preset.bash_exports`` to get an atomizer that does.
 
 .. LINKS

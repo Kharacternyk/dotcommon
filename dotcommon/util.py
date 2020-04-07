@@ -5,9 +5,9 @@ def preset(paths):
 def strip(string, comment_chars):
     comment_start = string.find(comment_chars)
     if comment_start == -1:
-        return string.strip()
+        return string.rstrip()
     else:
-        return string[:comment_start].strip()
+        return string[:comment_start].rstrip()
 
 
 def lines_starting_with(start, comment_chars):
