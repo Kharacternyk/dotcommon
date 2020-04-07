@@ -9,7 +9,7 @@ def strip(string, comment_chars):
 def lines_starting_with(start, comment_chars):
     def _f(text):
         for line in text.splitlines():
-            stripped = strip(line, '"')
+            stripped = strip(line, comment_chars)
             if stripped.startswith(start):
                 yield stripped
 
