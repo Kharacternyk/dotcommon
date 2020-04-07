@@ -6,8 +6,8 @@ def get_repos(github, query="topic:dotfiles"):
     return github.search_repositories(query=query)
 
 
-def count_atoms(repos, atomizer, paths, *, repo_count=100, quite=False):
-    counter = Counter()
+def count_atoms(repos, atomizers, paths, *, repo_count=100, quite=False):
+    counters = [Counter() for _ in atomizers]
 
     processed_repos = 0
     succeeded_repos = 0
@@ -19,8 +19,9 @@ def count_atoms(repos, atomizer, paths, *, repo_count=100, quite=False):
                     # It's a dir.
                     continue
                 text = contents.decoded_content.decode("utf-8")
-                counter.update(atomizer(text))
                 succeeded_repos += 1
+                for counter, atomizer in counters, atomizers:
+                    counter.update(atomizer(text))
                 break
             except (GithubException, AssertionError):
                 pass
@@ -28,4 +29,4 @@ def count_atoms(repos, atomizer, paths, *, repo_count=100, quite=False):
             processed_repos += 1
             print(f"[#{processed_repos}]({succeeded_repos}): {repo.full_name}")
 
-    return counter
+    return counters

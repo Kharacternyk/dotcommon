@@ -10,11 +10,11 @@ def strip(string, comment_chars):
         return string[:comment_start].rstrip()
 
 
-def lines_starting_with(start, comment_chars, paths):
+def lines_starting_with(start, comment_chars):
     def _f(text):
         for line in text.splitlines():
             stripped = strip(line, '"')
             if stripped.startswith(start):
                 yield stripped
 
-    return (_f, paths)
+    return _f
