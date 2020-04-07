@@ -18,7 +18,7 @@ def count_atoms(
                 text = repo.get_contents(path).decoded_content.decode("utf-8")
                 counter.update(atomizer(text))
                 break
-            except GithubException:
+            except (GithubException, AssertionError):
                 pass
         if not quite:
             processed_repos += 1
