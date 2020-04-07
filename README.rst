@@ -12,18 +12,18 @@ GitHub search ``topic:dotfiles``.
 
 10 most common Vim set statements (``vimrc`` was found in 165 repos):
 
-+-----------------+-----+
-| set incsearch   | 114 |
-| set hlsearch    | 110 |
-| set ignorecase  | 108 |
-| set expandtab   | 104 |
-| set nocompatible| 103 |
-| set laststatus=2| 103 |
-| set autoindent  | 103 |
-| set number      | 101 |
-| set smartcase   | 95  |
-| set showcmd     | 83  |
-+-----------------+-----+
+================  ===
+set incsearch     114
+set hlsearch      110
+set ignorecase    108
+set expandtab     104
+set nocompatible  103
+set laststatus=2  103
+set autoindent    103
+set number        101
+set smartcase     95 
+set showcmd       83 
+================  ===
 
 ===============
 Try it yourself
@@ -36,6 +36,7 @@ and brings you into Python REPL. First of all, you need to generate
 an access token for GitHub and create an instance of ``Github`` class:
 
 .. code-block:: python
+
     g = Github("your_token_here")
 
 The primary operation is *counting atoms* where an *atom* is alias,
@@ -45,4 +46,5 @@ You may use any of the existing presets to generate an instance
 of ``collections.Counter`` which will contain counted atoms.
 
 .. code-block:: python
+
     counter = count_atoms(g, *presets.vim_set_statements)
