@@ -6,12 +6,12 @@ def get_repos(github, query="topic:dotfiles"):
     return github.search_repositories(query=query)
 
 
-def count_atoms(repos, atomizers, paths, *, repo_count=100, quite=False):
+def count_atoms(repos, atomizers, paths, *, quite=False):
     counters_atomizers = [(Counter(), atomizer) for atomizer in atomizers]
 
     processed_repos = 0
     succeeded_repos = 0
-    for repo in repos[:repo_count]:
+    for repo in repos:
         for path in paths:
             try:
                 contents = repo.get_contents(path)
