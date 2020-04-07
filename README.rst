@@ -47,4 +47,4 @@ of ``collections.Counter`` which will contain counted atoms.
 
 .. code-block:: python
 
-    counter = count_atoms(g, *presets.vim_set_statements)
+    counter = crawler.count_atoms(g, *presets.vim_set_statements)
