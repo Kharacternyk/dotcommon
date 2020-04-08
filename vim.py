@@ -1,6 +1,7 @@
-"Vim"
+#!/usr/bin/env python
 
 from dotcommon.util import lines_starting_with
+from dotcommon.crawl import crawl
 
 paths = (".vimrc", "vimrc", ".vim/vimrc", "vim/.vimrc", "vim/vimrc")
 
@@ -21,4 +22,5 @@ def plug():
 
 
 atomizers = set_statements, vundle, plug
-preset = paths, atomizers
+
+crawl("Vim", paths, atomizers, "data/vim")

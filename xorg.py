@@ -1,6 +1,7 @@
-"Xorg"
+#!/usr/bin/env python
 
 from dotcommon.util import lines_starting_with
+from dotcommon.crawl import crawl
 
 paths = (".xinitrc", "xinitrc")
 
@@ -11,4 +12,5 @@ def window_managers():
 
 
 atomizers = (window_managers,)
-preset = paths, atomizers
+
+crawl("Xorg", paths, atomizers, "data/vim")

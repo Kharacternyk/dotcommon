@@ -1,6 +1,7 @@
-"Bash"
+#!/usr/bin/env python
 
 from dotcommon.util import lines_starting_with
+from dotcommon.crawl import crawl
 
 paths = (".bashrc", "bashrc")
 
@@ -26,4 +27,5 @@ def ps1():
 
 
 atomizers = readline_macros, aliases, exports, ps1
-preset = paths, atomizers
+
+crawl("Bash", paths, atomizers, "data/bash")
