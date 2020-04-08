@@ -9,7 +9,7 @@ from github import Github
 with open("token.gh") as token:
     g = Github(token.read().strip())
 
-repos = c.get_repos(g)[:200]
+repos = c.get_repos(g)[:20]
 
 with open("README-TEMPLATE.rst") as template:
     readme_intro = template.read()
@@ -27,7 +27,8 @@ for preset in p.Vim, p.Bash:
     echo("------------------")
     echo()
 
-    counters = c.count_atoms(repos, *preset.preset)
+    succeeded, counters = c.count_atoms(repos, *preset.preset)
+    echo(succeeded, "configs were found.")
     for counter in counters:
         echo(tabulate(counter.most_common(10), tablefmt="rst"))
 

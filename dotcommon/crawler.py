@@ -29,4 +29,4 @@ def count_atoms(repos, paths, atomizers, *, quite=False):
             processed_repos += 1
             print(f"[#{processed_repos}]({succeeded_repos}): {repo.full_name}")
 
-    return [counter for (counter, atomizer) in counters_atomizers]
+    return succeeded_repos, [counter for (counter, atomizer) in counters_atomizers]
