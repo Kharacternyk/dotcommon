@@ -1,7 +1,8 @@
 dotcommon is a crawler that is built to answer questions
 *What are the most popular Bash aliases?*,
 *What are the most popular Vundle plugins for Vim?*, etc.
-It crawls GitHub repos that match topic ``dotfiles`` and counts such things.
+It crawls the most starred GitHub repos that match topic
+``dotfiles`` and counts such things.
 
 .. contents:: Navigation:
 
@@ -10,6 +11,9 @@ Vim
 ------------------
 
 4 configs were found.
+
+Set statements
+~~~~~~~~~~~~~~~~~~~~~
 
 ==============================  =
 set nocompatible                3
@@ -24,7 +28,13 @@ set ruler                       3
 set background=dark             2
 ==============================  =
 
+Vundle plugins
+~~~~~~~~~~~~~~~~~~~~~
 
+
+
+Vim-plug plugins
+~~~~~~~~~~~~~~~~~~~~~
 
 ========================================  =
 Plug 'ap/vim-css-color'                   1
@@ -45,12 +55,21 @@ Bash
 
 3 configs were found.
 
+Readline macros
+~~~~~~~~~~~~~~~~~~~~~
 
+
+
+Aliases
+~~~~~~~~~~~~~~~~~~~~~
 
 ====================================================================================================================================================================  =
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'  1
 alias ssh="gpg-connect-agent updatestartuptty /bye >/dev/null; ssh"                                                                                                   1
 ====================================================================================================================================================================  =
+
+Exports
+~~~~~~~~~~~~~~~~~~~~~
 
 ==============  =
 export GPG_TTY  1
