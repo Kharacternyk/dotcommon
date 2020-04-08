@@ -1,0 +1,59 @@
+
+Vim
+---
+
+166 configs were found.
+
+Set statements
+~~~~~~~~~~~~~~
+
+
+====================  ===
+``set incsearch``     109
+``set ignorecase``    105
+``set expandtab``     100
+``set hlsearch``       98
+``set laststatus=2``   98
+``set autoindent``     96
+``set number``         93
+``set smartcase``      92
+``set nocompatible``   89
+``set showcmd``        78
+====================  ===
+
+
+Vundle plugins
+~~~~~~~~~~~~~~
+
+
+===========================================  ==
+``Plugin 'scrooloose/nerdtree'``             19
+``Plugin 'tpope/vim-fugitive'``              15
+``Plugin 'VundleVim/Vundle.vim'``            13
+``Plugin 'vim-airline/vim-airline'``         13
+``Plugin 'airblade/vim-gitgutter'``          11
+``Plugin 'vim-airline/vim-airline-themes'``  11
+``Plugin 'tpope/vim-surround'``              10
+``Plugin 'scrooloose/syntastic'``             9
+``Plugin 'gmarik/Vundle.vim'``                9
+``Plugin 'Raimondi/delimitMate'``             7
+===========================================  ==
+
+
+Vim-plug plugins
+~~~~~~~~~~~~~~~~
+
+
+=================================  ==
+``Plug 'tpope/vim-fugitive'``      43
+``Plug 'tpope/vim-surround'``      32
+``Plug 'tpope/vim-repeat'``        24
+``Plug 'junegunn/fzf.vim'``        22
+``Plug 'airblade/vim-gitgutter'``  22
+``Plug 'tpope/vim-commentary'``    19
+``Plug 'w0rp/ale'``                19
+``Plug 'tpope/vim-unimpaired'``    18
+``Plug 'tpope/vim-endwise'``       16
+``Plug 'tpope/vim-abolish'``       15
+=================================  ==
+
