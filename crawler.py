@@ -2,8 +2,7 @@
 
 from dotcommon.count_atoms import count_atoms
 from dotcommon.presets import vim, bash, xorg
-
-from tabulate import tabulate
+from dotcommon.format import counter_to_table
 from github import Github
 
 with open("token.gh") as token:
@@ -36,5 +35,5 @@ for preset in vim, bash, xorg:
         echo(atomizer.__doc__)
         echo("~~~~~~~~~~~~~~~~~~~~~")
         echo()
-        echo(tabulate(counter.most_common(10), tablefmt="rst"))
+        echo(counter_to_table(counter, 10))
         echo()

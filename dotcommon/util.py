@@ -16,3 +16,4 @@ def lines_starting_with(doc, start, comment_chars):
     _f.__doc__ = doc
 
     return lambda _: _f
+
