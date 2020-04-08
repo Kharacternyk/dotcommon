@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from dotcommon.util import lines_starting_with
+from dotcommon.util import lines_starting_with, strip
 from dotcommon.crawl import crawl
 
 paths = (".vimrc", "vimrc", ".vim/vimrc", "vim/.vimrc", "vim/vimrc")
@@ -20,7 +20,17 @@ def vundle():
 def plug():
     pass
 
+def custom_functions(text):
+    "Custom functions per vimrc"
+    count = 0
+    for line in text.splitlines():
+        stripped = strip(line, '"')
+        if stripped.startswith("endfunction"):
+            count += 1
+    # A tuple!
+    return count,
 
-atomizers = set_statements, vundle, plug
+
+atomizers = set_statements, vundle, plug, custom_functions
 
 crawl("Vim", paths, atomizers)
