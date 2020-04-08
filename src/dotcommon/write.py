@@ -6,8 +6,8 @@ def write_table(counter):
     print(tabulate(monospaced, tablefmt="rst"))
     print()
 
-def write_header(header):
+def write_header(header, char):
     print()
     print(header)
-    print("-" * len(header))
+    print(char * len(header))
     print()

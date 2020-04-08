@@ -10,10 +10,10 @@ def crawl(header, paths, atomizers):
 
     repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:500]
 
-    write_header(header)
+    write_header(header, "-")
 
     succeeded, counters_atomizers = count_atoms(repos, paths, atomizers)
     print(succeeded, "configs were found.")
     for counter, atomizer in counters_atomizers:
-        write_header(atomizer.__doc__)
+        write_header(atomizer.__doc__, "~")
         write_table(counter)
