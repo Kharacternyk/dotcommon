@@ -2,7 +2,7 @@
 
 from dotcommon.count_atoms import count_atoms
 from dotcommon.presets import vim, bash, xorg
-from dotcommon.format import counter_to_table
+from dotcommon.readme_writer import ReadmeWriter
 from github import Github
 
 with open("token.gh") as token:
@@ -13,27 +13,13 @@ repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:250]
 with open("README-TEMPLATE.rst") as template:
     readme_intro = template.read()
 
-readme = open("README.rst", "w")
-
-
-def echo(*args):
-    print(*args, file=readme)
-
-
-echo(readme_intro)
+readme = ReadmeWriter("README.rst")
+readme.echo(readme_intro)
 
 for preset in vim, bash, xorg:
-    echo()
-    echo(preset.__doc__)
-    echo("------------------")
-    echo()
-
+    readme.write_preset(preset)
     succeeded, counters_atomizers = count_atoms(repos, *preset.preset)
-    echo(succeeded, "configs were found.")
-    echo()
+    readme.echo(succeeded, "configs were found.")
     for counter, atomizer in counters_atomizers:
-        echo(atomizer.__doc__)
-        echo("~~~~~~~~~~~~~~~~~~~~~")
-        echo()
-        echo(counter_to_table(counter, 10))
-        echo()
+        readme.write_atomizer(atomizer)
+        readme.write_counter(counter)
