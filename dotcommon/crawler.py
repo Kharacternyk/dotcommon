@@ -2,10 +2,6 @@ from github import GithubException
 from collections import Counter
 
 
-def get_repos(github, query="topic:dotfiles"):
-    return github.search_repositories(query=query)
-
-
 def count_atoms(repos, paths, atomizers, *, quite=False):
     counters_atomizers = [(Counter(), atomizer) for atomizer in atomizers]
 
