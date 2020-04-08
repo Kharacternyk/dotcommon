@@ -25,7 +25,7 @@ def custom_functions(text):
     count = 0
     for line in text.splitlines():
         stripped = strip(line, '"')
-        if stripped.startswith("endfunction"):
+        if stripped.startswith("endfun"):
             count += 1
     # A tuple!
     return count,
