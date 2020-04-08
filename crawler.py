@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from dotcommon.count_atoms import count_atoms
-from dotcommon.presets import Vim, Bash
+from dotcommon.presets import vim, bash
 
 from tabulate import tabulate
 from github import Github
@@ -23,9 +23,9 @@ def echo(*args):
 
 echo(readme_intro)
 
-for preset in Vim, Bash:
+for preset in vim, bash:
     echo()
-    echo(preset.__name__)
+    echo(preset.__doc__)
     echo("------------------")
     echo()
 
