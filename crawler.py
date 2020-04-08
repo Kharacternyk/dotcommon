@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import dotcommon.crawler as c
-import dotcommon.presets as p
+from dotcommon.count_atoms import count_atoms
+from dotcommon.presets import Vim, Bash
 
 from tabulate import tabulate
 from github import Github
@@ -23,13 +23,13 @@ def echo(*args):
 
 echo(readme_intro)
 
-for preset in p.Vim, p.Bash:
+for preset in Vim, Bash:
     echo()
     echo(preset.__name__)
     echo("------------------")
     echo()
 
-    succeeded, counters = c.count_atoms(repos, *preset.preset)
+    succeeded, counters = count_atoms(repos, *preset.preset)
     echo(succeeded, "configs were found.")
     echo()
     for counter in counters:
