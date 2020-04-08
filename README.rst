@@ -86,7 +86,7 @@ PS1
 Vim
 ---
 
-166 configs were found.
+167 configs were found.
 
 Set statements
 ~~~~~~~~~~~~~~
@@ -96,10 +96,10 @@ Set statements
 ``set incsearch``     109
 ``set ignorecase``    105
 ``set expandtab``     100
+``set laststatus=2``   99
 ``set hlsearch``       98
-``set laststatus=2``   98
 ``set autoindent``     96
-``set number``         93
+``set number``         94
 ``set smartcase``      92
 ``set nocompatible``   89
 ``set showcmd``        78
@@ -130,16 +130,34 @@ Vim-plug plugins
 
 =================================  ==
 ``Plug 'tpope/vim-fugitive'``      43
-``Plug 'tpope/vim-surround'``      32
+``Plug 'tpope/vim-surround'``      33
 ``Plug 'tpope/vim-repeat'``        24
+``Plug 'airblade/vim-gitgutter'``  23
 ``Plug 'junegunn/fzf.vim'``        22
-``Plug 'airblade/vim-gitgutter'``  22
 ``Plug 'tpope/vim-commentary'``    19
 ``Plug 'w0rp/ale'``                19
 ``Plug 'tpope/vim-unimpaired'``    18
 ``Plug 'tpope/vim-endwise'``       16
 ``Plug 'tpope/vim-abolish'``       15
 =================================  ==
+
+
+Custom functions per vimrc
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+======  ==
+``0``   75
+``1``   29
+``2``   12
+``3``   11
+``4``    8
+``8``    7
+``11``   4
+``9``    4
+``6``    3
+``5``    3
+======  ==
 
 
 Xorg
