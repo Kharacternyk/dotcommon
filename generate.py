@@ -29,6 +29,7 @@ for preset in p.Vim, p.Bash:
 
     succeeded, counters = c.count_atoms(repos, *preset.preset)
     echo(succeeded, "configs were found.")
+    echo()
     for counter in counters:
         echo(tabulate(counter.most_common(10), tablefmt="rst"))
 

@@ -9,7 +9,8 @@ It crawls GitHub repos that match topic ``dotfiles`` and counts such things.
 Vim
 ------------------
 
-4 configs were found
+4 configs were found.
+
 ==============================  =
 set nocompatible                3
 set wildmenu                    3
@@ -39,7 +40,8 @@ Plug 'ctrlpvim/ctrlp.vim'                 1
 Bash
 ------------------
 
-3 configs were found
+3 configs were found.
+
 
 ====================================================================================================================================================================  =
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'  1
