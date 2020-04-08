@@ -19,6 +19,10 @@ def aliases():
 def exports():
     pass
 
+@lines_starting_with("PS1", "PS1=", "#")
+def ps1():
+    pass
 
-atomizers = readline_macros, aliases, exports
+
+atomizers = readline_macros, aliases, exports, ps1
 preset = paths, atomizers
