@@ -11,5 +11,5 @@ cat README-TEMPLATE.rst data/* > README.rst
 
 git reset && \
 git stage README.rst && \
-git commit -m "Update $DATE." && \
+git commit -m "Update $@." && \
 git push
