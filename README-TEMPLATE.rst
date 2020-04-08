@@ -4,4 +4,4 @@ dotcommon is a crawler that is built to answer questions
 It crawls 250 the most starred GitHub repos that match topic
 ``dotfiles`` and counts such things.
 
-.. contents:: Navigation:
+.. contents:: Here are top-tens of various things:
