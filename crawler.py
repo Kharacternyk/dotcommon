@@ -9,7 +9,7 @@ from github import Github
 with open("token.gh") as token:
     g = Github(token.read().strip())
 
-repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:200]
+repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:250]
 
 with open("README-TEMPLATE.rst") as template:
     readme_intro = template.read()
