@@ -28,4 +28,4 @@ def ps1():
 
 atomizers = readline_macros, aliases, exports, ps1
 
-crawl("Bash", paths, atomizers, "data/bash")
+crawl("Bash", paths, atomizers)

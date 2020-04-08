@@ -23,4 +23,4 @@ def plug():
 
 atomizers = set_statements, vundle, plug
 
-crawl("Vim", paths, atomizers, "data/vim")
+crawl("Vim", paths, atomizers)

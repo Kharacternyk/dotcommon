@@ -13,4 +13,4 @@ def window_managers():
 
 atomizers = (window_managers,)
 
-crawl("Xorg", paths, atomizers, "data/vim")
+crawl("Xorg", paths, atomizers)

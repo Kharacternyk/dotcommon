@@ -4,13 +4,13 @@ from dotcommon.count_atoms import count_atoms
 from dotcommon.section_writer import SectionWriter
 from github import Github
 
-def crawl(header, paths, atomizers, outputpath):
+def crawl(header, paths, atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
     repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:10]
 
-    output = SectionWriter(outputpath)
+    output = SectionWriter("data/" + header)
     output.write_header(header)
 
     succeeded, counters_atomizers = count_atoms(repos, paths, atomizers)
