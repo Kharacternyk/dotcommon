@@ -1,0 +1,23 @@
+
+Xorg
+----
+
+40 configs were found.
+
+Window managers
+---------------
+
+
+====================================================================  ==
+``exec i3``                                                           14
+``exec bspwm``                                                         5
+``exec xmonad``                                                        2
+``exec dwm``                                                           1
+``exec openbox-session``                                               1
+``exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &``   1
+``exec "$@"``                                                          1
+``exec "$wm"``                                                         1
+``exec awesome --no-argb &> /tmp/awesome.log``                         1
+``exec dbus-launch i3``                                                1
+====================================================================  ==
+
