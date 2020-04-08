@@ -1,17 +1,15 @@
 #!/bin/bash
 set -eu
 
-[[ $# == 0 ]] && exit
+[[ $# != 1 ]] && exit
 
-for preset in "$@"; do
-    ./src/$preset.py > ./data/$preset
-done
+./src/$1.py > ./data/$1
 
 cat README-TEMPLATE.rst data/* > README.rst
 
 cd data
 
 git reset && \
-git stage ../README.rst "$@" && \
-git commit -m "Update $@." && \
+git stage ../README.rst "$1" && \
+git commit -m "Update $1." && \
 git push
