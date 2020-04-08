@@ -8,7 +8,7 @@ def crawl(header, paths, atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
-    repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:10]
+    repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:500]
 
     write_header(header)
 
