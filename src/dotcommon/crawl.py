@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from dotcommon.count_atoms import count_atoms
-from dotcommon.section_writer import SectionWriter
+from dotcommon.write import write_header, write_table
 from github import Github
 
 def crawl(header, paths, atomizers):
@@ -10,11 +10,10 @@ def crawl(header, paths, atomizers):
 
     repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:10]
 
-    output = SectionWriter("data/" + header)
-    output.write_header(header)
+    write_header(header)
 
     succeeded, counters_atomizers = count_atoms(repos, paths, atomizers)
-    output.echo(succeeded, "configs were found.")
+    print(succeeded, "configs were found.")
     for counter, atomizer in counters_atomizers:
-        output.write_header(atomizer.__doc__)
-        output.write_table(counter)
+        write_header(atomizer.__doc__)
+        write_table(counter)
