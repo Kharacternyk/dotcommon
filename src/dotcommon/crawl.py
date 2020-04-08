@@ -4,6 +4,7 @@ from dotcommon.count_atoms import count_atoms
 from dotcommon.write import write_header, write_table
 from github import Github
 
+
 def crawl(header, paths, atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
