@@ -19,6 +19,7 @@ def aliases():
 def exports():
     pass
 
+
 @lines_starting_with("PS1", "PS1=", "#")
 def ps1():
     pass

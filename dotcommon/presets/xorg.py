@@ -10,5 +10,5 @@ def window_managers():
     pass
 
 
-atomizers = window_managers,
+atomizers = (window_managers,)
 preset = paths, atomizers
