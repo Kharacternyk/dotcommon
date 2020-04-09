@@ -3,8 +3,6 @@
 from dotcommon.util import lines_starting_with, strip
 from dotcommon.crawl import crawl
 
-paths = (".vimrc", "vimrc", ".vim/vimrc", "vim/.vimrc", "vim/vimrc")
-
 
 @lines_starting_with("Set statements", "set ", '"')
 def set_statements():
@@ -20,6 +18,7 @@ def vundle():
 def plug():
     pass
 
+
 def custom_functions(text):
     "Custom functions per vimrc"
     count = 0
@@ -28,9 +27,9 @@ def custom_functions(text):
         if stripped.startswith("endfun"):
             count += 1
     # A tuple!
-    return count,
+    return (count,)
 
 
 atomizers = set_statements, vundle, plug, custom_functions
 
-crawl("Vim", paths, atomizers)
+crawl("Vim", "vimrc", atomizers)

@@ -5,16 +5,15 @@ from dotcommon.write import write_header, write_table
 from github import Github
 
 
-def crawl(header, paths, atomizers):
+def crawl(header, filename, atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
-    query = " ".join("filename:" + path for path in paths)
-    files = g.search_code(query=query)[:2000]
+    files = g.search_code(query="filename:" + filename)[:2000]
 
     write_header(header, "-")
 
-    counters_atomizers = count_atoms(files, paths, atomizers)
+    counters_atomizers = count_atoms(files, atomizers)
     for counter, atomizer in counters_atomizers:
         write_header(atomizer.__doc__, "~")
         write_table(counter)

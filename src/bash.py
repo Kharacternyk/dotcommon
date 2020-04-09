@@ -3,8 +3,6 @@
 from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
-paths = (".bashrc", "bashrc")
-
 
 @lines_starting_with("Readline macros", "bind ", "#")
 def readline_macros():
@@ -28,4 +26,4 @@ def ps1():
 
 atomizers = readline_macros, aliases, exports, ps1
 
-crawl("Bash", paths, atomizers)
+crawl("Bash", "bashrc", atomizers)

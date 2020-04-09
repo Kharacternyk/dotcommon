@@ -3,8 +3,6 @@
 from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
-paths = (".xinitrc", "xinitrc")
-
 
 @lines_starting_with("Window managers", "exec ", "#")
 def window_managers():
@@ -13,4 +11,4 @@ def window_managers():
 
 atomizers = (window_managers,)
 
-crawl("Xorg", paths, atomizers)
+crawl("Xorg", "xinitrc", atomizers)

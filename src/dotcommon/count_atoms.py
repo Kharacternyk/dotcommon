@@ -2,7 +2,7 @@ from github import GithubException
 from collections import Counter
 
 
-def count_atoms(files, paths, atomizers):
+def count_atoms(files, atomizers):
     counters_atomizers = [(Counter(), atomizer) for atomizer in atomizers]
 
     for file in files:
