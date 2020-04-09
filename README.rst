@@ -93,7 +93,7 @@ Radline macros
 ==========================================  =
 
 
-bspwm
+BSPWM
 -----
 
 
@@ -133,7 +133,7 @@ Window gap/border width
 ===============  ===
 
 
-sxhkd
+SXHKD
 -----
 
 

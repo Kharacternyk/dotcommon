@@ -16,4 +16,4 @@ def commands_no_bspc(text):
     return (command for command in commands(text) if command.split()[0] != "bspc")
 
 
-crawl("sxhkd", "sxhkdrc", commands, commands_no_bspc)
+crawl("SXHKD", "sxhkdrc", commands, commands_no_bspc)
