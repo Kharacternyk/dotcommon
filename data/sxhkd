@@ -1,0 +1,22 @@
+
+sxhkd
+-----
+
+
+Commands bound to keybinds
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+=========================================================  ===
+``pkill -USR1 -x sxhkd``                                   137
+``bspc desktop -l next``                                   114
+``bspc node -{f,s} {west,south,north,east}``                86
+``bspc node -p {west,south,north,east}``                    83
+``bspc node -p cancel``                                     79
+``rofi -show run``                                          79
+``bspc node -t {tiled,pseudo_tiled,floating,fullscreen}``   78
+``bspc node -o 0.{1-9}``                                    76
+``bspc node -{c,k}``                                        75
+``bspc quit``                                               69
+=========================================================  ===
+
