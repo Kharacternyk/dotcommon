@@ -9,39 +9,21 @@ Bash
 ----
 
 
-Readline macros
-~~~~~~~~~~~~~~~
-
-
-==========================================  =
-``bind '"\e[A": history-search-backward'``  9
-``bind '"\e[B": history-search-forward'``   9
-``bind "set completion-ignore-case on"``    4
-``bind 'set completion-ignore-case on'``    3
-``bind -m vi-insert "\C-l":clear-screen``   3
-``bind C-l:clear-screen``                   2
-``bind '"\eOA": history-search-backward'``  2
-``bind '"\eOB": history-search-forward'``   2
-``bind -x '"\C-p": vim $(fzf);'``           2
-``bind '"\e[1~": beginning-of-line'``       2
-==========================================  =
-
-
 Aliases
 ~~~~~~~
 
 
 ========================================================================================================================================================================  ===
-``alias la='ls -A'``                                                                                                                                                      297
-``alias l='ls -CF'``                                                                                                                                                      286
-``alias ll='ls -alF'``                                                                                                                                                    282
-``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  222
-``alias ls='ls --color=auto'``                                                                                                                                             75
-``alias rm='rm -i'``                                                                                                                                                       67
-``alias mv='mv -i'``                                                                                                                                                       57
-``alias cp='cp -i'``                                                                                                                                                       54
-``alias grep='grep --color=auto'``                                                                                                                                         46
-``alias ..='cd ..'``                                                                                                                                                       46
+``alias la='ls -A'``                                                                                                                                                      263
+``alias l='ls -CF'``                                                                                                                                                      244
+``alias ll='ls -alF'``                                                                                                                                                    241
+``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  195
+``alias ls='ls --color=auto'``                                                                                                                                             83
+``alias rm='rm -i'``                                                                                                                                                       52
+``alias ..='cd ..'``                                                                                                                                                       49
+``alias ll='ls -l'``                                                                                                                                                       42
+``alias grep='grep --color=auto'``                                                                                                                                         42
+``alias cp='cp -i'``                                                                                                                                                       40
 ========================================================================================================================================================================  ===
 
 
@@ -49,36 +31,66 @@ Exports
 ~~~~~~~
 
 
-======================================  ==
-``export EDITOR=vim``                   52
-``export HISTCONTROL=ignoreboth``       34
-``export CLICOLOR=1``                   34
-``export NVM_DIR="$HOME/.nvm"``         32
-``export PATH="$PATH:$HOME/.rvm/bin"``  25
-``export HISTCONTROL=ignoredups``       21
-``export EDITOR='vim'``                 20
-``export LANG=en_US.UTF-8``             20
-``export EDITOR="vim"``                 19
-``export HISTSIZE=10000``               18
-======================================  ==
+=================================  ==
+``export EDITOR=vim``              70
+``export CLICOLOR=1``              34
+``export NVM_DIR="$HOME/.nvm"``    29
+``export HISTCONTROL=ignoreboth``  24
+``export VISUAL=vim``              21
+``export HISTSIZE=10000``          21
+``export PATH``                    20
+``export EDITOR="vim"``            20
+``export EDITOR='vim'``            15
+``export LANG=en_US.UTF-8``        15
+=================================  ==
 
 
 PS1
 ~~~
 
 
-===================================================================================================================================================================================================  ==
-``PS1='[\u@\h \W]\$ '``                                                                                                                                                                              29
-``PS1="$LIGHT_GRAY\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $LIGHT_GRAY"``                                                                                                         3
-``PS1="${TITLEBAR}\``                                                                                                                                                                                 3
-``PS1='\[\e[$RED\]\u\[\e[$LGREEN\]@\[\e[$BROWN\]\h\[\e[$LBLUE\] \w \$\[\e[$WHITE\] '``                                                                                                                2
-``PS1="${GREEN}\w${END}${GIT_BR_TAG}${BLUE}$ ${END}"``                                                                                                                                                2
-``PS1='\[\e[1;30m\][\[\e[m\e[0;31m\]\D{%m-%d %H:%M}\[\e[m\e[1;30m\]][\[\e[m\e[0;32m\]\u\[\e[m\e[1;30m\]@\[\e[m\e[0;34m\]\h\[\e[m\e[1;30m\]]\[\e[m\] \w\$ '``                                          2
-``PS1='\[\033[1;35m\]\t\[\033[0;36m\]::\[\033[1;31m\]\u \[\033[0;36m\]{ \[\033[01;34m\]\w \[\033[0;36m\]} $(__git_ps1 "{ \[\033[01;34m\]%s \[\033[0;36m\]}") \n\[\033[1;35m\]-> $ \[\033[0;30m\]'``   2
-``PS1="\h:\W\$(grb_git_prompt) \u\$ "``                                                                                                                                                               2
-``PS1='└──── '``                                                                                                                                                                                      2
-``PS1=${lt_blue}'\u'${norm}'@'${HOSTCOLOUR}'\h '${norm}'['${green}'\@'${norm}'] '${yellow}'\w\n'${norm}'${ERROR_FLAG:+'${lt_red}'}\$${ERROR_FLAG:+'${norm}'} '``                                      2
-===================================================================================================================================================================================================  ==
+==============================================================================================================================  ==
+``PS1='[\u@\h \W]\$ '``                                                                                                         44
+``PS1="${TITLEBAR}\``                                                                                                            4
+``PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '``                    3
+``PS1="$LIGHT_GRAY\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $LIGHT_GRAY"``                                    3
+``PS1='`[ $? = 0 ] && echo "\[\033[01;34m\]✔\[\033[00m\]"\``                                                                     2
+``PS1='`[ $? = 0 ] && echo "\[\033[01;34m\]✔\[\033[00m\]" ||\``                                                                  2
+``PS1="$PS1\n\$ "``                                                                                                              2
+``PS1='\h:\W$(__git_ps1 "(%s)") \u\$ '``                                                                                         2
+``PS1="\[$GREEN\]\t\[$RED\]-\[$YELLOW\]\u@\h:\[$BLUE\]\[$BLUE\]\w\[\033[m\]\[$GREEN\]\$(parse_git_branch)\[$NO_COLOR\]\n\$ "``   2
+``PS1="\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "``                                                                              2
+==============================================================================================================================  ==
+
+
+PS2
+~~~
+
+
+============================================  =
+``PS2='> '``                                  4
+``PS2='\[${C_PINK}\]>>> \[${C_COMMANDE}\]'``  2
+``PS2="\[${yellow}\]-> \[${reset}\]";``       1
+``PS2="loop \$ "``                            1
+============================================  =
+
+
+Radline macros
+~~~~~~~~~~~~~~
+
+
+==========================================  =
+``bind '"\e[A": history-search-backward'``  8
+``bind '"\e[B": history-search-forward'``   8
+``bind "set completion-ignore-case on"``    7
+``bind 'set completion-ignore-case on'``    4
+``bind 'set show-all-if-ambiguous on'``     3
+``bind "set show-all-if-ambiguous on"``     3
+``bind '"[A":history-search-backward'``                                             2
+``bind '"[B":history-search-forward'``                                             2
+``bind 'set visible-stats on'``             2
+``bind 'Space:magic-space'``                2
+==========================================  =
 
 
 bspwm
