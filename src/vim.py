@@ -11,7 +11,13 @@ def set_statements(text):
 
 def leader(text):
     "<leader> key mappings"
-    return lines_starting_with("let mapleader", text)
+    for line in text.splitlines():
+        if line.startswith("let mapleader"):
+            stripped = line.rstrip()
+            quote = stripped[-1]
+            char = stripped[stripped.find(quote) + 1:-1]
+            return (char,)
+    return()
 
 
 def vundle(text):
