@@ -84,23 +84,22 @@ PS1
 Vim
 ---
 
-167 configs were found.
 
 Set statements
 ~~~~~~~~~~~~~~
 
 
 ====================  ===
-``set incsearch``     109
-``set ignorecase``    105
-``set expandtab``     100
-``set laststatus=2``   99
-``set hlsearch``       98
-``set autoindent``     96
-``set number``         94
-``set smartcase``      92
-``set nocompatible``   89
-``set showcmd``        78
+``set expandtab``     578
+``set nocompatible``  555
+``set number``        511
+``set hlsearch``      486
+``set incsearch``     472
+``set laststatus=2``  426
+``set shiftwidth=4``  382
+``set ignorecase``    378
+``set tabstop=4``     371
+``set ruler``         362
 ====================  ===
 
 
@@ -108,54 +107,54 @@ Vundle plugins
 ~~~~~~~~~~~~~~
 
 
-===========================================  ==
-``Plugin 'scrooloose/nerdtree'``             19
-``Plugin 'tpope/vim-fugitive'``              15
-``Plugin 'VundleVim/Vundle.vim'``            13
-``Plugin 'vim-airline/vim-airline'``         13
-``Plugin 'airblade/vim-gitgutter'``          11
-``Plugin 'vim-airline/vim-airline-themes'``  11
-``Plugin 'tpope/vim-surround'``              10
-``Plugin 'scrooloose/syntastic'``             9
-``Plugin 'gmarik/Vundle.vim'``                9
-``Plugin 'Raimondi/delimitMate'``             7
-===========================================  ==
+===========================================  ===
+``Plugin 'VundleVim/Vundle.vim'``            103
+``Plugin 'scrooloose/nerdtree'``              74
+``Plugin 'tpope/vim-fugitive'``               66
+``Plugin 'gmarik/Vundle.vim'``                51
+``Plugin 'vim-airline/vim-airline'``          44
+``Plugin 'Valloric/YouCompleteMe'``           43
+``Plugin 'tpope/vim-surround'``               39
+``Plugin 'scrooloose/syntastic'``             37
+``Plugin 'vim-airline/vim-airline-themes'``   36
+``Plugin 'majutsushi/tagbar'``                33
+===========================================  ===
 
 
 Vim-plug plugins
 ~~~~~~~~~~~~~~~~
 
 
-=================================  ==
-``Plug 'tpope/vim-fugitive'``      43
-``Plug 'tpope/vim-surround'``      33
-``Plug 'tpope/vim-repeat'``        24
-``Plug 'airblade/vim-gitgutter'``  23
-``Plug 'junegunn/fzf.vim'``        22
-``Plug 'tpope/vim-commentary'``    19
-``Plug 'w0rp/ale'``                19
-``Plug 'tpope/vim-unimpaired'``    18
-``Plug 'tpope/vim-endwise'``       16
-``Plug 'tpope/vim-abolish'``       15
-=================================  ==
+=========================================  ==
+``Plug 'tpope/vim-fugitive'``              75
+``Plug 'scrooloose/nerdtree'``             62
+``Plug 'tpope/vim-surround'``              52
+``Plug 'vim-airline/vim-airline'``         50
+``Plug 'airblade/vim-gitgutter'``          47
+``Plug 'vim-airline/vim-airline-themes'``  39
+``Plug 'junegunn/fzf.vim'``                32
+``Plug 'tpope/vim-commentary'``            32
+``Plug 'scrooloose/nerdcommenter'``        31
+``Plug 'majutsushi/tagbar'``               28
+=========================================  ==
 
 
 Custom functions per vimrc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-======  ==
-``0``   75
-``1``   29
-``2``   12
-``3``   11
-``4``    8
-``8``    7
-``11``   4
-``9``    4
-``6``    3
-``5``    3
-======  ==
+======  ===
+``0``   702
+``1``   135
+``2``    53
+``5``    32
+``4``    23
+``3``    22
+``6``    10
+``8``     7
+``7``     6
+``11``    5
+======  ===
 
 
 Xorg
