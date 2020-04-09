@@ -9,6 +9,4 @@ def window_managers():
     pass
 
 
-atomizers = (window_managers,)
-
-crawl("Xorg", "xinitrc", atomizers)
+crawl("Xorg", "xinitrc", window_managers)

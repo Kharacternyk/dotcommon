@@ -30,6 +30,4 @@ def custom_functions(text):
     return (count,)
 
 
-atomizers = set_statements, vundle, plug, custom_functions
-
-crawl("Vim", "vimrc", atomizers)
+crawl("Vim", "vimrc", set_statements, vundle, plug, custom_functions)

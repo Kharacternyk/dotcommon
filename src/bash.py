@@ -4,11 +4,6 @@ from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Readline macros", "bind ", "#")
-def readline_macros():
-    pass
-
-
 @lines_starting_with("Aliases", "alias ", "#")
 def aliases():
     pass
@@ -24,6 +19,9 @@ def ps1():
     pass
 
 
-atomizers = readline_macros, aliases, exports, ps1
+@lines_starting_with("Readline macros", "bind ", "#")
+def readline_macros():
+    pass
 
-crawl("Bash", "bashrc", atomizers)
+
+crawl("Bash", "bashrc", aliases, exports, ps1, readline_macros)

@@ -5,7 +5,7 @@ from dotcommon.write import write_header, write_table
 from github import Github
 
 
-def crawl(header, filename, atomizers):
+def crawl(header, filename, *atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
