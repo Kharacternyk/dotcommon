@@ -4,7 +4,7 @@ from dotcommon.util import lines_starting_with, strip
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Window rules", "bspc rule ", "#")
+@lines_starting_with("Window rules", "bspc rule ")
 def window_rules():
     pass
 
@@ -14,7 +14,7 @@ def gap_border(text):
     gap = "unset"
     border = "unset"
     for line in text.splitlines():
-        stripped = strip(line, "#")
+        stripped = line.rstrip()
         if stripped.startswith("bspc config window_gap "):
             gap = stripped[stripped.rfind(" ") + 1 :]
         elif stripped.startswith("bspc config border_width "):

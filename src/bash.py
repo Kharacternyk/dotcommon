@@ -4,22 +4,22 @@ from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Aliases", "alias ", "#")
+@lines_starting_with("Aliases", "alias ")
 def aliases():
     pass
 
 
-@lines_starting_with("Exports", "export ", "#")
+@lines_starting_with("Exports", "export ")
 def exports():
     pass
 
 
-@lines_starting_with("PS1", "PS1=", "#")
+@lines_starting_with("PS1", "PS1=")
 def ps1():
     pass
 
 
-@lines_starting_with("Readline macros", "bind ", "#")
+@lines_starting_with("Readline macros", "bind ")
 def readline_macros():
     pass
 
