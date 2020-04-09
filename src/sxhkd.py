@@ -11,4 +11,4 @@ def commands(text):
     return stripped
 
 
-crawl("sxhkd", "sxhkdrc", commands, count=15)
+crawl("sxhkd", "sxhkdrc", commands)
