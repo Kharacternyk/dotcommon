@@ -9,6 +9,11 @@ def set_statements():
     pass
 
 
+@lines_starting_with("<leader> key mappings", "let mapleader")
+def leader():
+    pass
+
+
 @lines_starting_with("Vundle plugins", "Plugin ")
 def vundle():
     pass
@@ -17,6 +22,7 @@ def vundle():
 @lines_starting_with("Vim-plug plugins", "Plug ")
 def plug():
     pass
+
 
 def custom_functions(text):
     "Custom functions per vimrc"
@@ -29,4 +35,4 @@ def custom_functions(text):
     return (count,)
 
 
-crawl("Vim", "vimrc", set_statements, vundle, plug, custom_functions)
+crawl("Vim", "vimrc", set_statements, leader, vundle, plug, custom_functions)
