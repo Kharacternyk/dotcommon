@@ -16,9 +16,9 @@ def gap_border(text):
     for line in text.splitlines():
         stripped = strip(line, "#")
         if stripped.startswith("bspc config window_gap "):
-            gap = stripped[: stripped.rfind(" ") : -1]
+            gap = stripped[stripped.rfind(" ") + 1 :]
         elif stripped.startswith("bspc config border_width "):
-            border = stripped[: stripped.rfind(" ") : -1]
+            border = stripped[stripped.rfind(" ") + 1 :]
     # Tuple!
     return (f"{gap}/{border}",)
 
