@@ -23,4 +23,4 @@ def gap_border(text):
     return (f"{gap}/{border}",)
 
 
-crawl("BSPWM", "bspwmrc", window_rules, gap_border)
+crawl("Bspwm", "bspwmrc", window_rules, gap_border)
