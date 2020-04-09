@@ -81,6 +81,46 @@ PS1
 ===================================================================================================================================================================================================  ==
 
 
+bspwm
+-----
+
+
+Window rules
+~~~~~~~~~~~~
+
+
+===========================================================  ===
+``bspc rule -a Screenkey manage=off``                        302
+``bspc rule -a Kupfer.py focus=on``                          256
+``bspc rule -a mplayer2 state=floating``                     218
+``bspc rule -a Gimp desktop='^8' state=floating follow=on``  185
+``bspc rule -a Chromium desktop='^2'``                       155
+``bspc rule -a Emacs state=tiled``                            54
+``bspc rule -a Zathura state=tiled``                          53
+``bspc rule -a Chromium desktop=^2``                          41
+``bspc rule -a mplayer2 floating=on``                         40
+``bspc rule -a Gimp desktop=^8 follow=on floating=on``        37
+===========================================================  ===
+
+
+Window gap/border width
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+===============  ===
+``21/2``         163
+``unset/unset``  100
+``0/2``           52
+``01/2``          45
+``0/1``           29
+``5/2``           25
+``21/3``          19
+``21/1``          18
+``21/0``          17
+``unset/2``       17
+===============  ===
+
+
 Vim
 ---
 
