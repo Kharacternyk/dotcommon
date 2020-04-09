@@ -18,10 +18,13 @@ def ps1(text):
     "PS1"
     return lines_starting_with("PS1=", text)
 
+def ps2(text):
+    "PS2"
+    return lines_starting_with("PS2=", text)
 
 def readline_macros(text):
     "Radline macros"
     return lines_starting_with("bind ", text)
 
 
-crawl("Bash", "bashrc", aliases, exports, ps1, readline_macros)
+crawl("Bash", "bashrc", aliases, exports, ps1, ps2, readline_macros)
