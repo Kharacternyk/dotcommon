@@ -11,7 +11,7 @@ def count_atoms(files, atomizers):
             text = file.decoded_content.decode("utf-8")
             for counter, atomizer in counters_atomizers:
                 counter.update(atomizer(text))
-        except (GithubException, AssertionError, UnicodeDecodeError) as e:
+        except (GithubException, AssertionError, UnicodeDecodeError, TypeError) as e:
             print(e, file=stderr)
             pass
 
