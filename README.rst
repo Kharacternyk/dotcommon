@@ -164,16 +164,16 @@ Set statements
 
 
 =======================  ===
-``set expandtab``        462
-``set number``           399
-``set nocompatible``     350
-``set hlsearch``         341
-``set laststatus=2``     323
-``set shiftwidth=4``     316
-``set tabstop=4``        303
+``set expandtab``        465
+``set number``           398
+``set nocompatible``     353
+``set hlsearch``         344
+``set laststatus=2``     326
+``set shiftwidth=4``     317
+``set tabstop=4``        304
 ``set incsearch``        289
-``set autoindent``       273
-``set background=dark``  252
+``set autoindent``       272
+``set background=dark``  255
 =======================  ===
 
 
@@ -181,18 +181,18 @@ Set statements
 ~~~~~~~~~~~~~~~~~~~~~
 
 
-==============================  ===
-``let mapleader = ","``         104
-``let mapleader=","``            59
-``let mapleader = "\<Space>"``   25
-``let mapleader = " "``          18
-``let mapleader=','``            16
-``let mapleader = ','``          15
-``let mapleader=" "``            10
-``let mapleader="\<Space>"``      6
-``let mapleader = ' '``           4
-``let mapleader=";"``             4
-==============================  ===
+==============================================  ===
+``,``                                           196
+`` ``                                            36
+``\<Space>``                                     32
+``;``                                             8
+````                                              6
+``pleader="," " leader is comm``                  2
+``\\``                                            2
+``-``                                             2
+``\<space>``                                      2
+``=" "          " one space as the map leade``    1
+==============================================  ===
 
 
 Vundle plugins
@@ -200,16 +200,16 @@ Vundle plugins
 
 
 ===========================================  ===
-``Plugin 'VundleVim/Vundle.vim'``            104
-``Plugin 'scrooloose/nerdtree'``              70
-``Plugin 'tpope/vim-fugitive'``               64
+``Plugin 'VundleVim/Vundle.vim'``            100
+``Plugin 'scrooloose/nerdtree'``              69
+``Plugin 'tpope/vim-fugitive'``               63
 ``Plugin 'gmarik/Vundle.vim'``                48
-``Plugin 'vim-airline/vim-airline'``          45
-``Plugin 'Valloric/YouCompleteMe'``           41
+``Plugin 'vim-airline/vim-airline'``          44
+``Plugin 'Valloric/YouCompleteMe'``           40
 ``Plugin 'vim-airline/vim-airline-themes'``   35
 ``Plugin 'tpope/vim-surround'``               34
-``Plugin 'scrooloose/syntastic'``             32
-``Plugin 'majutsushi/tagbar'``                30
+``Plugin 'scrooloose/syntastic'``             31
+``Plugin 'majutsushi/tagbar'``                29
 ===========================================  ===
 
 
@@ -219,13 +219,13 @@ Vim-plug plugins
 
 =========================================  ==
 ``Plug 'tpope/vim-fugitive'``              70
-``Plug 'scrooloose/nerdtree'``             59
+``Plug 'scrooloose/nerdtree'``             60
 ``Plug 'tpope/vim-surround'``              49
-``Plug 'vim-airline/vim-airline'``         48
+``Plug 'vim-airline/vim-airline'``         47
 ``Plug 'airblade/vim-gitgutter'``          45
-``Plug 'vim-airline/vim-airline-themes'``  36
-``Plug 'tpope/vim-commentary'``            32
-``Plug 'junegunn/fzf.vim'``                31
+``Plug 'vim-airline/vim-airline-themes'``  35
+``Plug 'junegunn/fzf.vim'``                30
+``Plug 'tpope/vim-commentary'``            30
 ``Plug 'scrooloose/nerdcommenter'``        29
 ``Plug 'majutsushi/tagbar'``               25
 =========================================  ==
@@ -236,13 +236,13 @@ Custom functions per vimrc
 
 
 ======  ===
-``0``   700
-``1``   135
-``2``    54
+``0``   704
+``1``   134
+``2``    53
 ``5``    32
 ``4``    23
 ``3``    22
-``6``    11
+``6``    10
 ``8``     7
 ``7``     6
 ``11``    5
