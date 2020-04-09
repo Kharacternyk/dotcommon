@@ -10,7 +10,7 @@ def crawl(header, paths, atomizers):
         g = Github(token.read().strip())
 
     query = " ".join("filename:" + path for path in paths)
-    files = g.search_code(query=query)[:10]
+    files = g.search_code(query=query)[:2000]
 
     write_header(header, "-")
 
