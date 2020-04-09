@@ -90,16 +90,16 @@ Window rules
 
 
 ===========================================================  ===
-``bspc rule -a Screenkey manage=off``                        302
-``bspc rule -a Kupfer.py focus=on``                          256
-``bspc rule -a mplayer2 state=floating``                     218
-``bspc rule -a Gimp desktop='^8' state=floating follow=on``  185
-``bspc rule -a Chromium desktop='^2'``                       155
-``bspc rule -a Emacs state=tiled``                            54
-``bspc rule -a Zathura state=tiled``                          53
-``bspc rule -a Chromium desktop=^2``                          41
-``bspc rule -a mplayer2 floating=on``                         40
-``bspc rule -a Gimp desktop=^8 follow=on floating=on``        37
+``bspc rule -a Screenkey manage=off``                        299
+``bspc rule -a Kupfer.py focus=on``                          247
+``bspc rule -a mplayer2 state=floating``                     207
+``bspc rule -a Gimp desktop='^8' state=floating follow=on``  182
+``bspc rule -a Chromium desktop='^2'``                       152
+``bspc rule -a Zathura state=tiled``                          57
+``bspc rule -a Emacs state=tiled``                            56
+``bspc rule -a mplayer2 floating=on``                         46
+``bspc rule -a Gimp desktop=^8 follow=on floating=on``        45
+``bspc rule -a mpv state=floating``                           35
 ===========================================================  ===
 
 
@@ -108,16 +108,16 @@ Window gap/border width
 
 
 ===============  ===
-``21/2``         163
-``unset/unset``  100
-``0/2``           52
-``01/2``          45
-``0/1``           29
-``5/2``           25
-``21/3``          19
-``21/1``          18
-``21/0``          17
-``unset/2``       17
+``12/2``         180
+``unset/unset``  103
+``10/2``          42
+``0/1``           35
+``5/2``           30
+``0/2``           29
+``12/4``          20
+``8/2``           20
+``0/0``           19
+``12/0``          17
 ===============  ===
 
 
