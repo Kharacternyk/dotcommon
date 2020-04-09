@@ -17,6 +17,6 @@ def count_atoms(files, atomizers):
                 for counter, atomizer in counters_atomizers:
                     counter.update(atomizer(text))
     except IndexError:
-        pass
+        print("Interrupted")
 
     return counters_atomizers
