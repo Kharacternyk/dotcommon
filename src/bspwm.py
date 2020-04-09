@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-from dotcommon.util import lines_starting_with, strip
+from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Window rules", "bspc rule ")
-def window_rules():
-    pass
+def window_rules(text):
+    "Window rules"
+    return lines_starting_with("bspc rule ", text)
 
 
 def gap_border(text):

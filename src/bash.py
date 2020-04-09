@@ -4,24 +4,24 @@ from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Aliases", "alias ")
-def aliases():
-    pass
+def aliases(text):
+    "Aliases"
+    return lines_starting_with("alias ", text)
 
 
-@lines_starting_with("Exports", "export ")
-def exports():
-    pass
+def exports(text):
+    "Exports"
+    return lines_starting_with("export ", text)
 
 
-@lines_starting_with("PS1", "PS1=")
-def ps1():
-    pass
+def ps1(text):
+    "PS1"
+    return lines_starting_with("PS1=", text)
 
 
-@lines_starting_with("Readline macros", "bind ")
-def readline_macros():
-    pass
+def readline_macros(text):
+    "Radline macros"
+    return lines_starting_with("bind ", text)
 
 
 crawl("Bash", "bashrc", aliases, exports, ps1, readline_macros)

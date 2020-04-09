@@ -4,24 +4,24 @@ from dotcommon.util import lines_starting_with
 from dotcommon.crawl import crawl
 
 
-@lines_starting_with("Set statements", "set ")
-def set_statements():
-    pass
+def set_statements(text):
+    "Set statements"
+    return lines_starting_with("set ", text)
 
 
-@lines_starting_with("<leader> key mappings", "let mapleader")
-def leader():
-    pass
+def leader(text):
+    "<leader> key mappings"
+    return lines_starting_with("let mapleader", text)
 
 
-@lines_starting_with("Vundle plugins", "Plugin ")
-def vundle():
-    pass
+def vundle(text):
+    "Vundle plugins"
+    return lines_starting_with("Plugin ", text)
 
 
-@lines_starting_with("Vim-plug plugins", "Plug ")
-def plug():
-    pass
+def plug(text):
+    "Vim-plug plugins"
+    return lines_starting_with("Plug ", text)
 
 
 def custom_functions(text):
