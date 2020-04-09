@@ -160,22 +160,21 @@ Custom functions per vimrc
 Xorg
 ----
 
-40 configs were found.
 
 Window managers
 ~~~~~~~~~~~~~~~
 
 
-====================================================================  ==
-``exec i3``                                                           14
-``exec bspwm``                                                         5
-``exec xmonad``                                                        2
-``exec dwm``                                                           1
-``exec openbox-session``                                               1
-``exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &``   1
-``exec "$@"``                                                          1
-``exec "$wm"``                                                         1
-``exec awesome --no-argb &> /tmp/awesome.log``                         1
-``exec dbus-launch i3``                                                1
-====================================================================  ==
+========================  ===
+``exec i3``               268
+``exec bspwm``             57
+``exec xmonad``            47
+``exec dwm``               44
+``exec awesome``           39
+``exec $(get_session)``    36
+``exec openbox-session``   26
+``exec startxfce4``        18
+``exec startkde``          11
+``exec dbus-launch i3``     7
+========================  ===
 
