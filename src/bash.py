@@ -18,9 +18,11 @@ def ps1(text):
     "PS1"
     return lines_starting_with("PS1=", text)
 
+
 def ps2(text):
     "PS2"
     return lines_starting_with("PS2=", text)
+
 
 def readline_macros(text):
     "Radline macros"

@@ -15,9 +15,9 @@ def leader(text):
         if line.startswith("let mapleader"):
             stripped = line.rstrip()
             quote = stripped[-1]
-            char = stripped[stripped.find(quote) + 1:-1]
+            char = stripped[stripped.find(quote) + 1 : -1]
             return (char,)
-    return()
+    return ()
 
 
 def vundle(text):
