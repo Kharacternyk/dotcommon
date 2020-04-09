@@ -9,12 +9,12 @@ def crawl(header, paths, atomizers):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
-    repos = g.search_repositories(query="topic:dotfiles", sort="stars")[:500]
+    query = " ".join("filename:" + path for path in paths)
+    files = g.search_code(query=query)[:10]
 
     write_header(header, "-")
 
-    succeeded, counters_atomizers = count_atoms(repos, paths, atomizers)
-    print(succeeded, "configs were found.")
+    counters_atomizers = count_atoms(files, paths, atomizers)
     for counter, atomizer in counters_atomizers:
         write_header(atomizer.__doc__, "~")
         write_table(counter)
