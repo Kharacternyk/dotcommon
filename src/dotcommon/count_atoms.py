@@ -6,8 +6,11 @@ def count_atoms(files, paths, atomizers):
     counters_atomizers = [(Counter(), atomizer) for atomizer in atomizers]
 
     for file in files:
-        text = file.decoded_content.decode("utf-8")
-        for counter, atomizer in counters_atomizers:
-            counter.update(atomizer(text))
+        try:
+            text = file.decoded_content.decode("utf-8")
+            for counter, atomizer in counters_atomizers:
+                counter.update(atomizer(text))
+        except (GithubException, AssertionError):
+            pass
 
     return counters_atomizers
