@@ -9,17 +9,6 @@ def set_statements(text):
     return lines_starting_with("set ", text)
 
 
-def leader(text):
-    "<leader> key mappings"
-    for line in text.splitlines():
-        if line.startswith("let mapleader"):
-            stripped = line.rstrip()
-            quote = stripped[-1]
-            char = stripped[stripped.find(quote) + 1 : -1]
-            return (char,)
-    return ()
-
-
 def vundle(text):
     "Vundle plugins"
     return lines_starting_with("Plugin ", text)
@@ -41,4 +30,4 @@ def custom_functions(text):
     return (count,)
 
 
-crawl("Vim", "vimrc", set_statements, leader, vundle, plug, custom_functions)
+crawl("Vim", "vimrc", set_statements, vundle, plug, custom_functions)
