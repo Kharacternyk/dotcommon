@@ -1,86 +1,84 @@
 dotcommon is a crawler that is built to answer questions
 *What are the most popular Bash aliases?*,
 *What are the most popular Vundle plugins for Vim?*, etc.
-It crawls 500 of the most starred GitHub repos that match topic
-``dotfiles`` and counts such things.
+It crawls 2000 of top results of GitHub search.
 
 .. contents:: Here are top-tens of various things:
 
 Bash
 ----
 
-75 configs were found.
 
 Readline macros
 ~~~~~~~~~~~~~~~
 
 
-============================================================  =
-``bind "set completion-ignore-case on"``                      1
-``bind "set show-all-if-ambiguous on"``                       1
-``bind -x '"\C-p": fvim'``                                    1
-``bind -m vi-insert '"\C-x\C-e": edit-and-execute-command'``  1
-``bind -m vi-command '"\C-w": emacs-editing-mode'``           1
-``bind -m vi-insert '"\C-w": emacs-editing-mode'``            1
-``bind -m emacs-standard '"\C-w": vi-editing-mode'``          1
-``bind -m vi-insert '"jj": vi-movement-mode'``                1
-``bind -m vi-insert '"\C-p": previous-history'``              1
-``bind -m vi-insert '"\C-n": next-history'``                  1
-============================================================  =
+==========================================  =
+``bind '"\e[A": history-search-backward'``  9
+``bind '"\e[B": history-search-forward'``   9
+``bind "set completion-ignore-case on"``    4
+``bind 'set completion-ignore-case on'``    3
+``bind -m vi-insert "\C-l":clear-screen``   3
+``bind C-l:clear-screen``                   2
+``bind '"\eOA": history-search-backward'``  2
+``bind '"\eOB": history-search-forward'``   2
+``bind -x '"\C-p": vim $(fzf);'``           2
+``bind '"\e[1~": beginning-of-line'``       2
+==========================================  =
 
 
 Aliases
 ~~~~~~~
 
 
-========================================================================================================================================================================  =
-``alias ls='ls --color=auto'``                                                                                                                                            8
-``alias grep='grep --color=auto'``                                                                                                                                        7
-``alias ..='cd ..'``                                                                                                                                                      7
-``alias ll='ls -alF'``                                                                                                                                                    7
-``alias la='ls -A'``                                                                                                                                                      7
-``alias l='ls -CF'``                                                                                                                                                      7
-``alias cp='cp -i'``                                                                                                                                                      6
-``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  5
-``alias mv='mv -i'``                                                                                                                                                      5
-``alias fgrep='fgrep --color=auto'``                                                                                                                                      5
-========================================================================================================================================================================  =
+========================================================================================================================================================================  ===
+``alias la='ls -A'``                                                                                                                                                      297
+``alias l='ls -CF'``                                                                                                                                                      286
+``alias ll='ls -alF'``                                                                                                                                                    282
+``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  222
+``alias ls='ls --color=auto'``                                                                                                                                             75
+``alias rm='rm -i'``                                                                                                                                                       67
+``alias mv='mv -i'``                                                                                                                                                       57
+``alias cp='cp -i'``                                                                                                                                                       54
+``alias grep='grep --color=auto'``                                                                                                                                         46
+``alias ..='cd ..'``                                                                                                                                                       46
+========================================================================================================================================================================  ===
 
 
 Exports
 ~~~~~~~
 
 
-=================================================  =
-``export EDITOR=vim``                              6
-``export HISTSIZE=10000``                          5
-``export LESS="-R"``                               4
-``export EDITOR="vim"``                            4
-``export HISTCONTROL=erasedups``                   4
-``export PATH``                                    4
-``export HISTCONTROL=ignoreboth:erasedups``        3
-``export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "``  3
-``export GREP_COLOR="1;31"``                       3
-``export QT_QPA_PLATFORMTHEME=qt5ct``              3
-=================================================  =
+======================================  ==
+``export EDITOR=vim``                   52
+``export HISTCONTROL=ignoreboth``       34
+``export CLICOLOR=1``                   34
+``export NVM_DIR="$HOME/.nvm"``         32
+``export PATH="$PATH:$HOME/.rvm/bin"``  25
+``export HISTCONTROL=ignoredups``       21
+``export EDITOR='vim'``                 20
+``export LANG=en_US.UTF-8``             20
+``export EDITOR="vim"``                 19
+``export HISTSIZE=10000``               18
+======================================  ==
 
 
 PS1
 ~~~
 
 
-=======================================================================================================================================================================================  =
-``PS1='[\u@\h \W]\$ '``                                                                                                                                                                  2
-``PS1='[\[\033[1;31m\]\u\[\033[0m\]@\H \w]$ '``                                                                                                                                          1
-``PS1='\[[01;32m\]\u@\h\[[00m\]:\[[01;34m\]\w\[[00m\] \[[01;33m\]$(parse_git_branch)\[[00m\]\$ '``                                                                                                                        1
-``PS1="\[$BOLD_GREEN\][\[$BOLD_YELLOW\]\u\[$BOLD_GREEN\]@\[$BOLD_BLUE\]\h:\[$BOLD_RED\]"'`pwd`'"\[$BOLD_GREEN\]] "'`git_branch`'" \[$GRAY\]\t\n\[$BOLD_GREEN\]"'\$'"\[$COLOR_NONE\] "``  1
-``PS1="$WHITE\W\$(__git_ps1 ' (%s)') $BLUEλ $WHITE"``                                                                                                                                    1
-``PS1="\[\e[0;31m\]┌─╼[\[\e[m\]\w\[\e[0;31m\]] \$SSH_PS1\$TOOLBOX_PS1\$GIT_PS1``                                                                                                         1
-``PS1="\n \[\033[0;34m\]┌─────(\[\033[1;35m\]\u\[\033[0;34m\])─────(\[\033[1;32m\]\w\[\033[0;34m\]) \n └> \[\033[1;36m\]\$ \[\033[0m\]"``                                                1
-``PS1="\[${yellow}\]\w\[${red}\]\$(__git_ps1)\n\[${green}\]$ \[${color_off}\]"``                                                                                                         1
-``PS1='\W \[\e[1;32m\]\$\[\e[m\] '``                                                                                                                                                     1
-``PS1="\u@\[\e[1;30m\]\h\[\e[0m\]:\[\e[0;33m\]\w\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[\e[0;34m\]%\[\e[0m\] "``                                                                  1
-=======================================================================================================================================================================================  =
+===================================================================================================================================================================================================  ==
+``PS1='[\u@\h \W]\$ '``                                                                                                                                                                              29
+``PS1="$LIGHT_GRAY\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $LIGHT_GRAY"``                                                                                                         3
+``PS1="${TITLEBAR}\``                                                                                                                                                                                 3
+``PS1='\[\e[$RED\]\u\[\e[$LGREEN\]@\[\e[$BROWN\]\h\[\e[$LBLUE\] \w \$\[\e[$WHITE\] '``                                                                                                                2
+``PS1="${GREEN}\w${END}${GIT_BR_TAG}${BLUE}$ ${END}"``                                                                                                                                                2
+``PS1='\[\e[1;30m\][\[\e[m\e[0;31m\]\D{%m-%d %H:%M}\[\e[m\e[1;30m\]][\[\e[m\e[0;32m\]\u\[\e[m\e[1;30m\]@\[\e[m\e[0;34m\]\h\[\e[m\e[1;30m\]]\[\e[m\] \w\$ '``                                          2
+``PS1='\[\033[1;35m\]\t\[\033[0;36m\]::\[\033[1;31m\]\u \[\033[0;36m\]{ \[\033[01;34m\]\w \[\033[0;36m\]} $(__git_ps1 "{ \[\033[01;34m\]%s \[\033[0;36m\]}") \n\[\033[1;35m\]-> $ \[\033[0;30m\]'``   2
+``PS1="\h:\W\$(grb_git_prompt) \u\$ "``                                                                                                                                                               2
+``PS1='└──── '``                                                                                                                                                                                      2
+``PS1=${lt_blue}'\u'${norm}'@'${HOSTCOLOUR}'\h '${norm}'['${green}'\@'${norm}'] '${yellow}'\w\n'${norm}'${ERROR_FLAG:+'${lt_red}'}\$${ERROR_FLAG:+'${norm}'} '``                                      2
+===================================================================================================================================================================================================  ==
 
 
 Vim
