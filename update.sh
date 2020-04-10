@@ -9,7 +9,7 @@ cat README-TEMPLATE.rst data/* > README.rst
 
 cd data
 
-git reset && \
-git stage ../README.rst "$1" && \
-git commit -m "Update data/$1." && \
+git reset
+git stage ../README.rst "$1"
+git commit -m "Update data/$1."
 git push
