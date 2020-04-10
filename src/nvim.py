@@ -24,17 +24,4 @@ def plug(text):
     return lines_starting_with("Plug ", text)
 
 
-def custom_functions(text):
-    "Custom functions per vimrc"
-    count = 0
-    for line in text.splitlines():
-        stripped = line.rstrip()
-        if stripped.startswith("endfun"):
-            count += 1
-    # A tuple!
-    return (count,)
-
-
-crawl(
-    "Neovim", "init.vim", set_statements, colorschemes, vundle, plug, custom_functions
-)
+crawl("Neovim", "init.vim", set_statements, colorschemes, vundle, plug)
