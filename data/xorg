@@ -8,15 +8,15 @@ Window managers
 
 
 ========================  ===
-``exec i3``               268
-``exec bspwm``             57
-``exec xmonad``            47
-``exec dwm``               44
-``exec awesome``           39
-``exec $(get_session)``    36
-``exec openbox-session``   26
-``exec startxfce4``        18
-``exec startkde``          11
-``exec dbus-launch i3``     7
+``exec i3``               223
+``exec bspwm``            129
+``exec dwm``               94
+``exec awesome``           28
+``exec xmonad``            23
+``exec $(get_session)``    20
+``exec openbox-session``   15
+``exec emacs``              8
+``exec startplasma-x11``    7
+``exec sowm``               6
 ========================  ===
 
