@@ -13,7 +13,7 @@ def crawl(header, filename, *atomizers, count=None, path=None):
     if path != None:
         query += " path:" + path
 
-    files = g.search_code(query=query)
+    files = g.search_code(query=query, sort='indexed', order='desc')
 
     if count != None:
         files = files[:count]
