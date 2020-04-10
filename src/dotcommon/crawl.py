@@ -5,11 +5,18 @@ from dotcommon.write import write_header, write_table
 from github import Github
 
 
-def crawl(header, filename, *atomizers, count=2000):
+def crawl(header, filename, *atomizers, count=None, path=None):
     with open("token.gh") as token:
         g = Github(token.read().strip())
 
-    files = g.search_code(query="filename:" + filename)[:count]
+    query = "filename:" + filename
+    if path != None:
+        query += " path:" + path
+
+    files = g.search_code(query=query)
+
+    if count != None:
+        files = files[:count]
 
     write_header(header, "-")
 
