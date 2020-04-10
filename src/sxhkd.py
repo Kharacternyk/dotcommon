@@ -8,7 +8,7 @@ def commands(text):
     "Commands bound to keybinds"
     indented = lines_starting_with(" ", text)
     stripped = (line.strip() for line in indented if not line.isspace())
-    return stripped
+    return (line for line in stripped if line[0] != "#")
 
 
 def commands_no_bspc(text):
