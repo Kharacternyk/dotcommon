@@ -9,6 +9,11 @@ def set_statements(text):
     return lines_starting_with("set ", text)
 
 
+def colorschemes(text):
+    "Colorschemes"
+    return lines_starting_with("colorscheme ", text)
+
+
 def vundle(text):
     "Vundle plugins"
     return lines_starting_with("Plugin ", text)
@@ -30,4 +35,4 @@ def custom_functions(text):
     return (count,)
 
 
-crawl("Vim", "vimrc", set_statements, vundle, plug, custom_functions)
+crawl("Vim", "vimrc", set_statements, colorschemes, vundle, plug, custom_functions)
