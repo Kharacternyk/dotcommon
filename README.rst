@@ -219,36 +219,36 @@ Commands bound to keybinds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-=========================================================  ===
-``pkill -USR1 -x sxhkd``                                   142
-``bspc desktop -l next``                                   111
-``bspc node -{f,s} {west,south,north,east}``                88
-``bspc node -p {west,south,north,east}``                    87
-``bspc node -p cancel``                                     83
-``bspc node -o 0.{1-9}``                                    81
-``bspc node -t {tiled,pseudo_tiled,floating,fullscreen}``   80
-``bspc quit``                                               77
-``bspc node -{c,k}``                                        75
-``rofi -show run``                                          73
-=========================================================  ===
+==============================================================  ===
+``pkill -USR1 -x sxhkd``                                        120
+``bspc node -{f,s} {west,south,north,east}``                     88
+``bspc desktop -l next``                                         81
+``bspc node -p {west,south,north,east}``                         81
+``bspc node -p cancel``                                          79
+``bspc node -{c,k}``                                             78
+``bspc node -o 0.{1-9}``                                         73
+``bspc node -f {next,prev}.local``                               72
+``bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}``   71
+``bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}``   70
+==============================================================  ===
 
 
 Commands bound to keybinds (except bspc)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-============================  ===
-``pkill -USR1 -x sxhkd``      142
-``rofi -show run``             73
-``firefox``                    56
-``urxvt``                      55
-``mpc toggle``                 42
-``termite``                    40
-``amixer set Master toggle``   40
-``xbacklight -dec 10``         38
-``xbacklight -inc 10``         36
-``urxvtc``                     35
-============================  ===
+========================  ===
+``pkill -USR1 -x sxhkd``  120
+``firefox``                61
+``playerctl play-pause``   56
+``# handled by dwm``       53
+``thunar``                 51
+``termite``                50
+``alacritty``              48
+``dmenu_run``              48
+``rofi -show run``         47
+``pavucontrol``            47
+========================  ===
 
 
 Termite
