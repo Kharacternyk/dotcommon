@@ -249,6 +249,28 @@ Commands bound to keybinds (except bspc)
 ============================  ===
 
 
+Termite
+-------
+
+
+Font
+~~~~
+
+
+=============================  ==
+``font = monospace 9``         55
+``font = monospace 12``        53
+``font = monospace 11``        36
+``font = monospace 10``        22
+``font = hack 10``             18
+``font = hack 11``             16
+``font = source code pro 10``  16
+``font = source code pro 11``  13
+``font = hack 12``             12
+``font = hack 9``              11
+=============================  ==
+
+
 Vim
 ---
 
