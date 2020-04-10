@@ -9,4 +9,12 @@ def window_managers(text):
     return lines_starting_with("exec ", text)
 
 
-crawl("Xorg", "xinitrc", window_managers)
+def daemons(text):
+    "Daemons"
+    for line in text.splitlines():
+        stripped = line.rstrip()
+        if stripped != "" and stripped[-1] == "&":
+            yield stripped
+
+
+crawl("Xorg", "xinitrc", window_managers, daemons)
