@@ -357,34 +357,16 @@ Window managers
 ~~~~~~~~~~~~~~~
 
 
-===========================================  ==
-``exec i3``                                  25
-``exec bspwm``                               21
-``exec dwm``                                  7
-``exec xmonad``                               4
-``exec awesome``                              3
-``exec nvidia-settings --load-config-only``   2
-``exec $(get_session)``                       2
-``exec openbox-session``                      2
-``exec sowm``                                 2
-``exec /usr/bin/i3``                          2
-===========================================  ==
-
-
-Daemons
-~~~~~~~
-
-
-====================================  ==
-``sxhkd &``                           12
-``dunst &``                            7
-``numlockx &``                         7
-``xsetroot -cursor_name left_ptr &``   6
-``done &``                             5
-``~/.fehbg &``                         5
-``nm-applet &``                        4
-``compton &``                          3
-``redshift &``                         3
-``udiskie &``                          3
-====================================  ==
+========================  ===
+``exec i3``               223
+``exec bspwm``            129
+``exec dwm``               94
+``exec awesome``           28
+``exec xmonad``            23
+``exec $(get_session)``    20
+``exec openbox-session``   15
+``exec emacs``              8
+``exec startplasma-x11``    7
+``exec sowm``               6
+========================  ===
 
