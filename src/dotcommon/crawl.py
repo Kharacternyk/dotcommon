@@ -10,12 +10,12 @@ def crawl(header, filename, *atomizers, count=None, path=None):
         g = Github(token.read().strip())
 
     query = "filename:" + filename
-    if path != None:
+    if path is not None:
         query += " path:" + path
 
-    files = g.search_code(query=query, sort='indexed', order='desc')
+    files = g.search_code(query=query, sort="indexed", order="desc")
 
-    if count != None:
+    if count is not None:
         files = files[:count]
 
     write_header(header, "-")
