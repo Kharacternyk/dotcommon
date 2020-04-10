@@ -12,4 +12,3 @@ cd data
 git reset
 git stage ../README.rst "$1"
 git commit -m "Update data/$1."
-git push
