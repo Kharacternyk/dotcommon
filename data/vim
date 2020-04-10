@@ -7,18 +7,36 @@ Set statements
 ~~~~~~~~~~~~~~
 
 
-=======================  ===
-``set expandtab``        465
-``set number``           398
-``set nocompatible``     353
-``set hlsearch``         344
-``set laststatus=2``     326
-``set shiftwidth=4``     317
-``set tabstop=4``        304
-``set incsearch``        289
-``set autoindent``       272
-``set background=dark``  255
-=======================  ===
+======================  ===
+``set expandtab``       434
+``set number``          415
+``set laststatus=2``    339
+``set hlsearch``        339
+``set shiftwidth=4``    323
+``set nocompatible``    312
+``set incsearch``       307
+``set tabstop=4``       300
+``set encoding=utf-8``  291
+``set ignorecase``      290
+======================  ===
+
+
+Colorschemes
+~~~~~~~~~~~~
+
+
+==========================  ==
+``colorscheme gruvbox``     65
+``colorscheme solarized``   41
+``colorscheme desert``      26
+``colorscheme molokai``     21
+``colorscheme onedark``     18
+``colorscheme jellybeans``  17
+``colorscheme dracula``     16
+``colorscheme PaperColor``  13
+``colorscheme nord``        10
+``colorscheme elflord``      9
+==========================  ==
 
 
 Vundle plugins
@@ -26,16 +44,16 @@ Vundle plugins
 
 
 ===========================================  ===
-``Plugin 'VundleVim/Vundle.vim'``            100
+``Plugin 'VundleVim/Vundle.vim'``            117
+``Plugin 'tpope/vim-fugitive'``               70
 ``Plugin 'scrooloose/nerdtree'``              69
-``Plugin 'tpope/vim-fugitive'``               63
-``Plugin 'gmarik/Vundle.vim'``                48
-``Plugin 'vim-airline/vim-airline'``          44
-``Plugin 'Valloric/YouCompleteMe'``           40
+``Plugin 'tpope/vim-surround'``               49
+``Plugin 'vim-airline/vim-airline'``          46
 ``Plugin 'vim-airline/vim-airline-themes'``   35
-``Plugin 'tpope/vim-surround'``               34
-``Plugin 'scrooloose/syntastic'``             31
-``Plugin 'majutsushi/tagbar'``                29
+``Plugin 'kien/ctrlp.vim'``                   33
+``Plugin 'pangloss/vim-javascript'``          28
+``Plugin 'gmarik/Vundle.vim'``                27
+``Plugin 'scrooloose/nerdcommenter'``         25
 ===========================================  ===
 
 
@@ -43,18 +61,18 @@ Vim-plug plugins
 ~~~~~~~~~~~~~~~~
 
 
-=========================================  ==
-``Plug 'tpope/vim-fugitive'``              70
-``Plug 'scrooloose/nerdtree'``             60
-``Plug 'tpope/vim-surround'``              49
-``Plug 'vim-airline/vim-airline'``         47
-``Plug 'airblade/vim-gitgutter'``          45
-``Plug 'vim-airline/vim-airline-themes'``  35
-``Plug 'junegunn/fzf.vim'``                30
-``Plug 'tpope/vim-commentary'``            30
-``Plug 'scrooloose/nerdcommenter'``        29
-``Plug 'majutsushi/tagbar'``               25
-=========================================  ==
+=========================================  ===
+``Plug 'tpope/vim-fugitive'``              149
+``Plug 'tpope/vim-surround'``              142
+``Plug 'junegunn/fzf.vim'``                127
+``Plug 'vim-airline/vim-airline'``         124
+``Plug 'scrooloose/nerdtree'``             110
+``Plug 'airblade/vim-gitgutter'``          107
+``Plug 'vim-airline/vim-airline-themes'``   87
+``Plug 'tpope/vim-commentary'``             87
+``Plug 'itchyny/lightline.vim'``            79
+``Plug 'tpope/vim-repeat'``                 67
+=========================================  ===
 
 
 Custom functions per vimrc
@@ -62,15 +80,15 @@ Custom functions per vimrc
 
 
 ======  ===
-``0``   704
-``1``   134
-``2``    53
-``5``    32
-``4``    23
-``3``    22
-``6``    10
-``8``     7
-``7``     6
-``11``    5
+``0``   579
+``1``   140
+``2``    85
+``3``    47
+``4``    35
+``5``    29
+``6``    22
+``8``    11
+``7``    10
+``13``    7
 ======  ===
 
