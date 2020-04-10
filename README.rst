@@ -133,6 +133,82 @@ Window gap/border width
 ===============  ===
 
 
+Neovim
+------
+
+
+Set statements
+~~~~~~~~~~~~~~
+
+
+=======================  ===
+``set number``           300
+``set expandtab``        290
+``set background=dark``  225
+``set hidden``           196
+``set shiftwidth=4``     191
+``set ignorecase``       182
+``set tabstop=4``        179
+``set autoindent``       174
+``set smartcase``        163
+``set incsearch``        162
+=======================  ===
+
+
+Vundle plugins
+~~~~~~~~~~~~~~
+
+
+===========================================  ==
+``Plugin 'scrooloose/nerdtree'``             17
+``Plugin 'VundleVim/Vundle.vim'``            16
+``Plugin 'vim-airline/vim-airline'``         11
+``Plugin 'vim-airline/vim-airline-themes'``  10
+``Plugin 'tpope/vim-fugitive'``              10
+``Plugin 'scrooloose/nerdcommenter'``         7
+``Plugin 'fatih/vim-go'``                     7
+``Plugin 'majutsushi/tagbar'``                7
+``Plugin 'tpope/vim-surround'``               6
+``Plugin 'airblade/vim-gitgutter'``           6
+===========================================  ==
+
+
+Vim-plug plugins
+~~~~~~~~~~~~~~~~
+
+
+=====================================================================  ===
+``Plug 'tpope/vim-fugitive'``                                          182
+``Plug 'vim-airline/vim-airline'``                                     156
+``Plug 'tpope/vim-surround'``                                          152
+``Plug 'vim-airline/vim-airline-themes'``                              140
+``Plug 'junegunn/fzf.vim'``                                            140
+``Plug 'scrooloose/nerdtree'``                                         135
+``Plug 'airblade/vim-gitgutter'``                                      105
+``Plug 'tpope/vim-commentary'``                                         94
+``Plug 'jiangmiao/auto-pairs'``                                         83
+``Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }``   82
+=====================================================================  ===
+
+
+Custom functions per vimrc
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+======  ===
+``0``   576
+``1``   129
+``2``    74
+``4``    60
+``3``    55
+``5``    17
+``12``   13
+``13``   11
+``7``    11
+``6``     8
+======  ===
+
+
 Sxhkd
 -----
 
