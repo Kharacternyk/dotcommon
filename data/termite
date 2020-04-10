@@ -7,16 +7,16 @@ Font
 ~~~~
 
 
-=============================  ==
-``font = monospace 9``         55
-``font = monospace 12``        53
-``font = monospace 11``        36
-``font = monospace 10``        22
-``font = hack 10``             18
-``font = hack 11``             16
-``font = source code pro 10``  16
-``font = source code pro 11``  13
-``font = hack 12``             12
-``font = hack 9``              11
-=============================  ==
+================================  ==
+``font = monospace 11``           17
+``font = monospace 9``            17
+``font = monospace 12``           15
+``font = monospace 13``           12
+``font = fira code 10``            7
+``font = profontwindowsczech 9``   6
+``font = monospace 10``            5
+``font = noto san mono 9``         4
+``font = hack nerd font 10``       4
+``font = hack 12``                 4
+================================  ==
 
