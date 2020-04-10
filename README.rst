@@ -135,6 +135,46 @@ Window gap/border width
 ===============  ===
 
 
+Fish
+----
+
+
+Aliases
+~~~~~~~
+
+
+=========================  ==
+``alias vim="nvim"``       29
+``alias g='git'``          14
+``alias vim='nvim'``       13
+``alias gs="git status"``  13
+``alias ls="exa"``         13
+``alias g="git"``          13
+``alias vi="nvim"``        12
+``alias gd='git diff'``    11
+``alias vim "nvim"``       10
+``alias gs='git status'``  10
+=========================  ==
+
+
+Exports
+~~~~~~~
+
+
+================================================================================  ==
+``set -x EDITOR nvim``                                                            71
+``set -x NNN_BMS 'd:~/Downloads;p:~/pics;D:~/Dropbox/;s:~/Dropbox/screenshots'``  54
+``set -x PATH /usr/local/bin $PATH``                                              50
+``set -x PAGER less``                                                             49
+``set -x VISUAL nvim``                                                            48
+``set -x TERMINAL alacritty``                                                     43
+``set -x NNN_SHOW_HIDDEN 1``                                                      43
+``set -x LESS -R``                                                                43
+``set -x BIB $HOME/uni.bib``                                                      42
+``set -x TERM alacritty``                                                         42
+================================================================================  ==
+
+
 Neovim
 ------
 
