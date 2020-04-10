@@ -144,17 +144,35 @@ Set statements
 
 
 =======================  ===
-``set number``           300
-``set expandtab``        290
-``set background=dark``  225
-``set hidden``           196
-``set shiftwidth=4``     191
-``set ignorecase``       182
-``set tabstop=4``        179
-``set autoindent``       174
-``set smartcase``        163
-``set incsearch``        162
+``set expandtab``        391
+``set number``           378
+``set hidden``           320
+``set ignorecase``       284
+``set background=dark``  270
+``set shiftwidth=4``     270
+``set smartcase``        258
+``set mouse=a``          255
+``set nobackup``         250
+``set tabstop=4``        247
 =======================  ===
+
+
+Colorschemes
+~~~~~~~~~~~~
+
+
+============================  ==
+``colorscheme gruvbox``       97
+``colorscheme dracula``       35
+``colorscheme onedark``       32
+``colorscheme nord``          22
+``colorscheme molokai``       21
+``colorscheme PaperColor``    17
+``colorscheme one``           17
+``colorscheme solarized``     16
+``colorscheme OceanicNext``   15
+``colorscheme NeoSolarized``  14
+============================  ==
 
 
 Vundle plugins
@@ -162,16 +180,16 @@ Vundle plugins
 
 
 ===========================================  ==
-``Plugin 'scrooloose/nerdtree'``             17
-``Plugin 'VundleVim/Vundle.vim'``            16
-``Plugin 'vim-airline/vim-airline'``         11
-``Plugin 'vim-airline/vim-airline-themes'``  10
-``Plugin 'tpope/vim-fugitive'``              10
-``Plugin 'scrooloose/nerdcommenter'``         7
-``Plugin 'fatih/vim-go'``                     7
-``Plugin 'majutsushi/tagbar'``                7
-``Plugin 'tpope/vim-surround'``               6
-``Plugin 'airblade/vim-gitgutter'``           6
+``Plugin 'VundleVim/Vundle.vim'``            10
+``Plugin 'scrooloose/nerdtree'``             10
+``Plugin 'tpope/vim-fugitive'``               8
+``Plugin 'vim-airline/vim-airline-themes'``   8
+``Plugin 'airblade/vim-gitgutter'``           7
+``Plugin 'vim-airline/vim-airline'``          7
+``Plugin 'ryanoasis/vim-devicons'``           5
+``Plugin 'tpope/vim-surround'``               5
+``Plugin 'Yggdroot/indentLine'``              4
+``Plugin 'godlygeek/tabular'``                4
 ===========================================  ==
 
 
@@ -179,18 +197,18 @@ Vim-plug plugins
 ~~~~~~~~~~~~~~~~
 
 
-=====================================================================  ===
-``Plug 'tpope/vim-fugitive'``                                          182
-``Plug 'vim-airline/vim-airline'``                                     156
-``Plug 'tpope/vim-surround'``                                          152
-``Plug 'vim-airline/vim-airline-themes'``                              140
-``Plug 'junegunn/fzf.vim'``                                            140
-``Plug 'scrooloose/nerdtree'``                                         135
-``Plug 'airblade/vim-gitgutter'``                                      105
-``Plug 'tpope/vim-commentary'``                                         94
-``Plug 'jiangmiao/auto-pairs'``                                         83
-``Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }``   82
-=====================================================================  ===
+===================================================  ===
+``Plug 'tpope/vim-fugitive'``                        288
+``Plug 'tpope/vim-surround'``                        260
+``Plug 'junegunn/fzf.vim'``                          242
+``Plug 'vim-airline/vim-airline'``                   231
+``Plug 'neoclide/coc.nvim', {'branch': 'release'}``  202
+``Plug 'scrooloose/nerdtree'``                       193
+``Plug 'tpope/vim-commentary'``                      188
+``Plug 'airblade/vim-gitgutter'``                    185
+``Plug 'vim-airline/vim-airline-themes'``            177
+``Plug 'jiangmiao/auto-pairs'``                      135
+===================================================  ===
 
 
 Custom functions per vimrc
@@ -198,16 +216,16 @@ Custom functions per vimrc
 
 
 ======  ===
-``0``   576
-``1``   129
-``2``    74
-``4``    60
-``3``    55
-``5``    17
-``12``   13
-``13``   11
-``7``    11
-``6``     8
+``0``   478
+``1``   158
+``2``   111
+``3``    72
+``4``    41
+``6``    30
+``5``    29
+``7``    15
+``12``   10
+``10``    9
 ======  ===
 
 
