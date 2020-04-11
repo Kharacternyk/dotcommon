@@ -1,7 +1,8 @@
 dotcommon is a crawler that is built to answer questions
-*What are the most popular Bash aliases?*,
-*What are the most popular Vundle plugins for Vim?*, etc.
-It searches GitHub for configs and counts such things.
+*What are the most common Bash aliases?*,
+*What are the most common Vundle plugins for Vim?*, etc.
+It searches GitHub for 1000 most recently edited configs
+(to follow trends) and counts such things.
 
 .. contents:: Here are top-tens of various things:
 
@@ -260,16 +261,16 @@ Commands bound to keybinds
 
 
 ==============================================================  ===
-``pkill -USR1 -x sxhkd``                                        120
-``bspc node -{f,s} {west,south,north,east}``                     88
-``bspc desktop -l next``                                         81
-``bspc node -p {west,south,north,east}``                         81
-``bspc node -p cancel``                                          79
-``bspc node -{c,k}``                                             78
-``bspc node -o 0.{1-9}``                                         73
-``bspc node -f {next,prev}.local``                               72
-``bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}``   71
-``bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}``   70
+``pkill -USR1 -x sxhkd``                                        118
+``bspc node -{f,s} {west,south,north,east}``                     83
+``bspc desktop -l next``                                         78
+``bspc node -{c,k}``                                             77
+``bspc node -p cancel``                                          76
+``bspc node -p {west,south,north,east}``                         74
+``bspc node -f {next,prev}.local``                               71
+``bspc node -o 0.{1-9}``                                         69
+``bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}``   69
+``firefox``                                                      69
 ==============================================================  ===
 
 
@@ -278,16 +279,16 @@ Commands bound to keybinds (except bspc)
 
 
 ========================  ===
-``pkill -USR1 -x sxhkd``  120
-``firefox``                61
-``playerctl play-pause``   56
-``# handled by dwm``       53
-``thunar``                 51
-``termite``                50
-``alacritty``              48
-``dmenu_run``              48
-``rofi -show run``         47
-``pavucontrol``            47
+``pkill -USR1 -x sxhkd``  118
+``firefox``                69
+``termite``                62
+``playerctl play-pause``   59
+``thunar``                 59
+``pavucontrol``            56
+``rofi -show run``         54
+``oblogout``               53
+``playerctl previous``     52
+``playerctl next``         51
 ========================  ===
 
 
