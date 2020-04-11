@@ -14,7 +14,8 @@ def daemons(text):
     for line in text.splitlines():
         stripped = line.rstrip()
         if stripped != "" and stripped[-1] == "&":
-            yield stripped
+            if stripped.split()[0] not in ("done", "fi", "esac"):
+                yield stripped
 
 
 crawl("Xorg", "xinitrc", window_managers, daemons)
