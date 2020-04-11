@@ -8,15 +8,15 @@ Window managers
 
 
 ========================  ===
-``exec i3``               221
-``exec bspwm``            129
-``exec dwm``               96
-``exec awesome``           28
+``exec i3``               216
+``exec bspwm``            128
+``exec dwm``               98
+``exec awesome``           27
 ``exec xmonad``            23
-``exec $(get_session)``    21
-``exec openbox-session``   15
-``exec emacs``              8
+``exec $(get_session)``    22
+``exec openbox-session``   14
 ``exec startplasma-x11``    7
+``exec emacs``              7
 ``exec sowm``               6
 ========================  ===
 
@@ -26,15 +26,15 @@ Daemons
 
 
 ====================================  ==
-``dunst &``                           88
-``sxhkd &``                           80
-``xsetroot -cursor_name left_ptr &``  37
-``done &``                            30
+``sxhkd &``                           87
+``dunst &``                           85
+``xsetroot -cursor_name left_ptr &``  36
+``unclutter &``                       30
 ``numlockx &``                        29
-``unclutter &``                       28
-``nm-applet &``                       27
+``nm-applet &``                       26
 ``picom &``                           23
-``~/.fehbg &``                        21
-``compton &``                         19
+``~/.fehbg &``                        22
+``compton &``                         21
+``redshift &``                        17
 ====================================  ==
 
