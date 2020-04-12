@@ -1,0 +1,129 @@
+
+i3wm
+----
+
+
+Modkey
+~~~~~~
+
+
+================================  ===
+``set $mod Mod4``                 732
+``set $mod Mod1``                 118
+``set $mod mod4``                   4
+``set $mod Mod3``                   3
+``set $mod = Mod1``                 1
+``set $mod Ctrl``                   1
+``set $mod mod1``                   1
+``set $mod   Mod1``                 1
+``set $mod                Mod4``    1
+================================  ===
+
+
+Font
+~~~~
+
+
+==================================================================  ===
+``font pango:monospace 8``                                          200
+``font xft:URWGothic-Book 11``                                       46
+``font pango:DejaVu Sans Mono 8``                                    40
+``font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1``   40
+``font pango:monospace 10``                                          23
+``font pango:monospace 9``                                           15
+``font pango:Noto Mono Regular 13``                                  13
+``font pango:DejaVu Sans Mono 10``                                   12
+``font pango:monospace 12``                                          10
+``font pango:DejaVu Sans Mono 12``                                    9
+==================================================================  ===
+
+
+Keybindings
+~~~~~~~~~~~
+
+
+============================================  ===
+``bindsym $mod+Shift+r restart``              768
+``bindsym $mod+Shift+space floating toggle``  730
+``bindsym $mod+Shift+c reload``               723
+``bindsym $mod+f fullscreen toggle``          719
+``bindsym $mod+r mode "resize"``              713
+``bindsym $mod+space focus mode_toggle``      684
+``bindsym $mod+Right focus right``            683
+``bindsym $mod+Shift+Right move right``       675
+``bindsym $mod+Down focus down``              671
+``bindsym $mod+Up focus up``                  671
+============================================  ===
+
+
+Modes
+~~~~~
+
+
+=============================  ===
+``mode "resize" {``            791
+``mode "$mode_system" {``      201
+``mode "$mode_gaps" {``        152
+``mode "$mode_gaps_inner" {``  152
+``mode "$mode_gaps_outer" {``  152
+``mode "$mode_launcher" {``     15
+``mode "$mode_display" {``      12
+``mode "Resize Mode" {``        11
+``mode "$mode_gaps_horiz" {``   10
+``mode "$mode_gaps_verti" {``   10
+=============================  ===
+
+
+Inner gaps
+~~~~~~~~~~
+
+
+=================  ===
+``gaps inner 10``  117
+``gaps inner 5``    73
+``gaps inner 14``   48
+``gaps inner 15``   45
+``gaps inner 0``    26
+``gaps inner 8``    26
+``gaps inner 20``   26
+``gaps inner 6``    24
+``gaps inner 12``   16
+``gaps inner 7``    15
+=================  ===
+
+
+Outer gaps
+~~~~~~~~~~
+
+
+=================  ===
+``gaps outer 0``   123
+``gaps outer 5``    63
+``gaps outer -2``   59
+``gaps outer 10``   30
+``gaps outer 2``    22
+``gaps outer 15``   13
+``gaps outer 1``    13
+``gaps outer -4``   12
+``gaps outer 20``   10
+``gaps outer 12``    8
+=================  ===
+
+
+exec
+~~~~
+
+
+==================================================================================  ===
+``exec --no-startup-id nm-applet``                                                  352
+``exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork``          127
+``exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1``   91
+``exec --no-startup-id pamac-tray``                                                  85
+``exec --no-startup-id xfce4-power-manager``                                         84
+``exec --no-startup-id volumeicon``                                                  77
+``exec --no-startup-id clipit``                                                      65
+``exec --no-startup-id nitrogen --restore; sleep 1; compton -b``                     52
+``exec --no-startup-id dunst``                                                       49
+``exec --no-startup-id blueman-applet``                                              44
+==================================================================================  ===
+
