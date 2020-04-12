@@ -452,16 +452,16 @@ Set statements
 
 
 ======================  ===
-``set expandtab``       434
-``set number``          415
-``set laststatus=2``    339
-``set hlsearch``        339
-``set shiftwidth=4``    323
-``set nocompatible``    312
-``set incsearch``       307
-``set tabstop=4``       300
-``set encoding=utf-8``  291
-``set ignorecase``      290
+``set expandtab``       469
+``set number``          417
+``set hlsearch``        351
+``set incsearch``       337
+``set nocompatible``    319
+``set laststatus=2``    305
+``set autoindent``      302
+``set ignorecase``      284
+``set shiftwidth=4``    283
+``set encoding=utf-8``  270
 ======================  ===
 
 
@@ -470,16 +470,16 @@ Colorschemes
 
 
 ==========================  ==
-``colorscheme gruvbox``     65
-``colorscheme solarized``   41
-``colorscheme desert``      26
-``colorscheme molokai``     21
+``colorscheme gruvbox``     70
+``colorscheme molokai``     37
+``colorscheme solarized``   34
+``colorscheme desert``      22
 ``colorscheme onedark``     18
-``colorscheme jellybeans``  17
-``colorscheme dracula``     16
-``colorscheme PaperColor``  13
-``colorscheme nord``        10
-``colorscheme elflord``      9
+``colorscheme jellybeans``  15
+``colorscheme nord``        13
+``colorscheme dracula``     12
+``colorscheme slate``       10
+``colorscheme solarized8``   8
 ==========================  ==
 
 
@@ -488,16 +488,16 @@ Vundle plugins
 
 
 ===========================================  ===
-``Plugin 'VundleVim/Vundle.vim'``            117
-``Plugin 'tpope/vim-fugitive'``               70
-``Plugin 'scrooloose/nerdtree'``              69
-``Plugin 'tpope/vim-surround'``               49
-``Plugin 'vim-airline/vim-airline'``          46
-``Plugin 'vim-airline/vim-airline-themes'``   35
-``Plugin 'kien/ctrlp.vim'``                   33
-``Plugin 'pangloss/vim-javascript'``          28
+``Plugin 'VundleVim/Vundle.vim'``            106
+``Plugin 'scrooloose/nerdtree'``              76
+``Plugin 'tpope/vim-fugitive'``               68
+``Plugin 'vim-airline/vim-airline'``          45
+``Plugin 'vim-airline/vim-airline-themes'``   40
+``Plugin 'tpope/vim-surround'``               34
 ``Plugin 'gmarik/Vundle.vim'``                27
-``Plugin 'scrooloose/nerdcommenter'``         25
+``Plugin 'morhetz/gruvbox'``                  24
+``Plugin 'kien/ctrlp.vim'``                   24
+``Plugin 'airblade/vim-gitgutter'``           23
 ===========================================  ===
 
 
@@ -506,16 +506,16 @@ Vim-plug plugins
 
 
 =========================================  ===
-``Plug 'tpope/vim-fugitive'``              149
-``Plug 'tpope/vim-surround'``              142
-``Plug 'junegunn/fzf.vim'``                127
-``Plug 'vim-airline/vim-airline'``         124
-``Plug 'scrooloose/nerdtree'``             110
-``Plug 'airblade/vim-gitgutter'``          107
-``Plug 'vim-airline/vim-airline-themes'``   87
-``Plug 'tpope/vim-commentary'``             87
-``Plug 'itchyny/lightline.vim'``            79
-``Plug 'tpope/vim-repeat'``                 67
+``Plug 'tpope/vim-fugitive'``              160
+``Plug 'tpope/vim-surround'``              152
+``Plug 'vim-airline/vim-airline'``         135
+``Plug 'junegunn/fzf.vim'``                123
+``Plug 'vim-airline/vim-airline-themes'``  115
+``Plug 'airblade/vim-gitgutter'``          109
+``Plug 'scrooloose/nerdtree'``             100
+``Plug 'tpope/vim-commentary'``             96
+``Plug 'tpope/vim-repeat'``                 88
+``Plug 'sheerun/vim-polyglot'``             73
 =========================================  ===
 
 
