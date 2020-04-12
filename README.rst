@@ -429,3 +429,79 @@ Daemons
 ``redshift &``                        17
 ====================================  ==
 
+
+Zsh
+---
+
+
+Aliases
+~~~~~~~
+
+
+==================================  ==
+``alias vim="nvim"``                47
+``alias gs='git status'``           34
+``alias grep='grep --color=auto'``  34
+``alias vim='nvim'``                33
+``alias rm='rm -i'``                29
+``alias g='git'``                   29
+``alias gs="git status"``           28
+``alias ..='cd ..'``                26
+``alias mv='mv -i'``                25
+``alias vi="nvim"``                 24
+==================================  ==
+
+
+Exports
+~~~~~~~
+
+
+==============================================  ===
+``export ZSH=$HOME/.oh-my-zsh``                 107
+``export LANG=en_US.UTF-8``                     106
+``export NVM_DIR="$HOME/.nvm"``                  94
+``export ZSH="$HOME/.oh-my-zsh"``                66
+``export LC_ALL=en_US.UTF-8``                    66
+``export KEYTIMEOUT=1``                          65
+``export EDITOR=vim``                            48
+``export GPG_TTY=$(tty)``                        46
+``export GOPATH=$HOME/go``                       40
+``export PATH=$HOME/bin:/usr/local/bin:$PATH``   38
+==============================================  ===
+
+
+Theme
+~~~~~
+
+
+===========================================  ==
+``ZSH_THEME="robbyrussell"``                 89
+``ZSH_THEME="powerlevel10k/powerlevel10k"``  65
+``ZSH_THEME="agnoster"``                     52
+``ZSH_THEME="spaceship"``                    26
+``ZSH_THEME="powerlevel9k/powerlevel9k"``    25
+``ZSH_THEME="ys"``                           13
+``ZSH_THEME="bira"``                         12
+``ZSH_THEME=""``                             11
+``ZSH_THEME=powerlevel10k/powerlevel10k``     8
+``ZSH_THEME="random"``                        8
+===========================================  ==
+
+
+Keybindings
+~~~~~~~~~~~
+
+
+=====================================================  ===
+``bindkey -v``                                         145
+``bindkey -e``                                          75
+``bindkey -M menuselect 'l' vi-forward-char``           38
+``bindkey -M menuselect 'j' vi-down-line-or-history``   38
+``bindkey -M menuselect 'h' vi-backward-char``          37
+``bindkey -M menuselect 'k' vi-up-line-or-history``     37
+``bindkey -v '^?' backward-delete-char``                27
+``bindkey '^[[A' history-substring-search-up``          24
+``bindkey '^[[B' history-substring-search-down``        24
+``bindkey '^e' edit-command-line``                      19
+=====================================================  ===
+
