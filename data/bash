@@ -8,16 +8,16 @@ Aliases
 
 
 ========================================================================================================================================================================  ===
-``alias la='ls -A'``                                                                                                                                                      183
-``alias l='ls -CF'``                                                                                                                                                      178
-``alias ll='ls -alF'``                                                                                                                                                    158
-``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  144
-``alias ls='ls --color=auto'``                                                                                                                                             83
-``alias grep='grep --color=auto'``                                                                                                                                         48
-``alias ..='cd ..'``                                                                                                                                                       38
-``alias gs='git status'``                                                                                                                                                  36
-``alias mv='mv -i'``                                                                                                                                                       34
-``alias rm='rm -i'``                                                                                                                                                       30
+``alias la='ls -A'``                                                                                                                                                      218
+``alias l='ls -CF'``                                                                                                                                                      212
+``alias ll='ls -alF'``                                                                                                                                                    197
+``alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'``  194
+``alias ls='ls --color=auto'``                                                                                                                                             91
+``alias grep='grep --color=auto'``                                                                                                                                         62
+``alias ..='cd ..'``                                                                                                                                                       43
+``alias mv='mv -i'``                                                                                                                                                       39
+``alias rm='rm -i'``                                                                                                                                                       36
+``alias cp='cp -i'``                                                                                                                                                       34
 ========================================================================================================================================================================  ===
 
 
@@ -26,16 +26,16 @@ Exports
 
 
 ==========================================================================================  ==
-``export EDITOR=vim``                                                                       74
-``export NVM_DIR="$HOME/.nvm"``                                                             50
-``export PATH``                                                                             33
-``export CLICOLOR=1``                                                                       30
-``export TERM=xterm-256color``                                                              27
-``export LC_ALL=en_US.UTF-8``                                                               25
-``export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'``  23
-``export VISUAL=vim``                                                                       23
+``export EDITOR=vim``                                                                       77
+``export NVM_DIR="$HOME/.nvm"``                                                             55
+``export CLICOLOR=1``                                                                       33
+``export PATH``                                                                             31
+``export TERM=xterm-256color``                                                              30
+``export VISUAL=vim``                                                                       29
+``export GPG_TTY=$(tty)``                                                                   24
+``export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'``  24
+``export LC_ALL=en_US.UTF-8``                                                               23
 ``export LANG=en_US.UTF-8``                                                                 22
-``export HISTCONTROL=ignoreboth``                                                           19
 ==========================================================================================  ==
 
 
@@ -43,48 +43,48 @@ PS1
 ~~~
 
 
-=============================================================================================================================================================================================  ==
-``PS1='[\u@\h \W]\$ '``                                                                                                                                                                        29
-``PS1="$"``                                                                                                                                                                                    28
-``PS1='[\u@\h \w \t \# ]\$ '``                                                                                                                                                                  2
-``PS1='\[\e[01;31m\]\h\[\e[01;34m\] \W \$\[\e[00m\] '``                                                                                                                                         2
-``PS1=' \w \$ '``                                                                                                                                                                               2
-``PS1="$DGY_ON_GY\W $BU_ON_GY$NO_COLOR\$(~/bin/prompt_git.sh)\$ "``                                                                                                                             2
-``PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$\n'``                                                2
-``PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\w\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└─╼ \[\e[1;35m\]>> \[\e[00;00m\]"``   2
-``PS1="${COLOR_RED}\$(SELECT)${COLOR_GREEN}\\w ${COLOR_PURPLE}\$(precmd)${COLOR_RESET}``                                                                                                        2
-``PS1="$G┌─[$BR\u$G]$BY@$G[$BW${HOSTNAME%%.*}$G]$B:\w\n$G└──>$BR \\$ $NONE"``                                                                                                                   2
-=============================================================================================================================================================================================  ==
+====================================================================================================================================================================================================  ==
+``PS1='[\u@\h \W]\$ '``                                                                                                                                                                               32
+``PS1="$"``                                                                                                                                                                                           27
+``PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '``                                                                                          3
+``PS1='${debian_chroot:+($debian_chroot)}\[\033[00;34m\]AwTrix\[\033[00;32m\]<\[\033[01;32m\]\t\[\033[00;32m\]>::\[\033[01;32m\]\u\[\033[00;32m\]("\[\033[01;32m\]\w/\[\033[00;32m\]");\e[0m\n\$ '``   2
+``PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '``                                                                                                                            2
+``PS1="${COLOR_RED}\$(SELECT)${COLOR_GREEN}\\w ${COLOR_PURPLE}\$(precmd)${COLOR_RESET}``                                                                                                               2
+``PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '``                                                                                                                                                2
+``PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '``                                                                                                                            2
+``PS1="\[\e]0;\w\a\]"``                                                                                                                                                                                2
+``PS1="${USRCLR}\u${FLDCLR} \w${RESET} > "``                                                                                                                                                           2
+====================================================================================================================================================================================================  ==
 
 
 PS2
 ~~~
 
 
-==============================================================  =
-``PS2="loop \$ "``                                              1
-``PS2='             \[\033[1m\]>>\[\033[0m\] '``                1
-``PS2="\[$(tput setaf 51)\]$(tput bold)└─‖ \[$(tput sgr0)\]"``  1
-``PS2="\[${fcya}\]> \[${fdef}\]"``                              1
-``PS2='>>> '``                                                  1
-``PS2="> "``                                                    1
-==============================================================  =
+======================================  =
+``PS2="$> "``                           1
+``PS2='\[\e[1m\]>\[\e[m\] '``           1
+``PS2=""``                              1
+``PS2='>>> '``                          1
+``PS2="\[${yellow}\]→ \[${reset}\]";``  1
+``PS2="$HC$FRED&gt; $RS"``              1
+======================================  =
 
 
 Radline macros
 ~~~~~~~~~~~~~~
 
 
-============================================  ==
-``bind "set completion-ignore-case on"``      18
-``bind "set show-all-if-ambiguous on"``       16
-``bind '"\e[A": history-search-backward'``    13
-``bind '"\e[B": history-search-forward'``     13
-``bind 'set show-all-if-ambiguous on'``        7
-``bind "set completion-map-case on"``          7
-``bind "set mark-symlinked-directories on"``   6
-``bind 'set completion-ignore-case on'``       5
-``bind '"\e[A":history-search-backward'``      4
-``bind '"\e[B":history-search-forward'``       4
-============================================  ==
+==========================================  ==
+``bind '"\e[B": history-search-forward'``   10
+``bind 'set completion-ignore-case on'``     9
+``bind '"\e[A": history-search-backward'``   8
+``bind "set show-all-if-ambiguous on"``      8
+``bind "set completion-ignore-case on"``     7
+``bind "set completion-map-case on"``        5
+``bind 'TAB:menu-complete'``                 4
+``bind '"\C-w": unix-filename-rubout'``      4
+``bind -x '"\C-p": vim $(fzf);'``            3
+``bind Space:magic-space``                   3
+==========================================  ==
 
