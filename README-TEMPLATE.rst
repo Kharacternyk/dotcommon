@@ -8,8 +8,8 @@ It searches GitHub for 1000 most recently edited configs
     and the numbers below should be interpreted in the context
     provided above: *1000 most recently edited configs hosted on
     GitHub*. Make any further assumptions on your own risk.
-    See `this slides`_ if you look for a serious research.
+    See `these slides`_ if you look for a serious research.
 
-.. _this slides: http://bit.ly/2NVyiXu
+.. _these slides: http://bit.ly/2NVyiXu
 
 .. contents:: Here are top-tens of various things:
