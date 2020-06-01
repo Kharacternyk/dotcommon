@@ -25,7 +25,7 @@ def ps2(text):
 
 
 def readline_macros(text):
-    "Radline macros"
+    "Readline macros"
     return lines_starting_with("bind ", text)
 
 
